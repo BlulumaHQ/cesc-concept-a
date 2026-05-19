@@ -48,17 +48,16 @@ export function SiteHeader() {
           aria-label="CESC — Chinese Enterprises Society of Canada"
         >
           <span
-            className={`inline-flex items-center px-5 py-3 transition-colors duration-500 ${
+            className={`inline-flex items-center px-4 py-2.5 transition-colors duration-500 ${
               transparent ? "bg-white/95 shadow-sm" : "bg-transparent"
             }`}
-            style={{ minWidth: "260px" }}
           >
             <img
               src={logo}
               alt="CESC — Chinese Enterprises Society of Canada"
               width={1344}
               height={303}
-              className="block h-[56px] md:h-[64px] lg:h-[72px] w-auto"
+              className="block h-[44px] md:h-[52px] lg:h-[60px] w-auto"
             />
           </span>
         </Link>
