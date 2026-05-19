@@ -1,8 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowUpRight, ArrowRight } from "lucide-react";
 import { SiteLayout } from "@/components/site-layout";
-import { leaders, events, articles } from "@/lib/site-data";
+import { leaders, articles, featuredEventData } from "@/lib/site-data";
 import heroImg from "@/assets/hero-summit.jpg";
+import heroForum from "@/assets/hero-forum.jpg";
 import skyline from "@/assets/vancouver-skyline.jpg";
 import community from "@/assets/community-impact.jpg";
 
@@ -21,28 +22,58 @@ export const Route = createFileRoute("/")({
 function HomePage() {
   return (
     <SiteLayout>
-      {/* HERO */}
-      <section className="relative min-h-[100svh] flex items-end overflow-hidden bg-[var(--primary)] text-white">
-        <img
-          src={heroImg}
-          alt="CESC executive networking summit in Vancouver"
-          className="absolute inset-0 w-full h-full object-cover opacity-55"
-          width={1920}
-          height={1280}
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-[var(--primary)]/70 via-[var(--primary)]/40 to-[var(--primary)]" />
-        <div className="absolute inset-0 bg-gradient-to-r from-[var(--primary)]/80 via-transparent to-transparent" />
+      {/* HERO — dual-slide cinematic */}
+      <section className="relative min-h-[108svh] flex items-end overflow-hidden bg-[var(--primary)] text-white">
+        {/* Slide A — Executive Leadership */}
+        <div className="absolute inset-0 hero-slide-a">
+          <img
+            src={heroImg}
+            alt="CESC executive networking summit in Vancouver"
+            className="absolute inset-0 w-full h-full object-cover opacity-60"
+            width={1920}
+            height={1280}
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-[var(--primary)]/75 via-[var(--primary)]/40 to-[var(--primary)]" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[var(--primary)]/85 via-transparent to-transparent" />
+        </div>
+        {/* Slide B — Global Business Collaboration */}
+        <div className="absolute inset-0 hero-slide-b">
+          <img
+            src={heroForum}
+            alt="International business forum and executive collaboration"
+            className="absolute inset-0 w-full h-full object-cover opacity-60"
+            width={1920}
+            height={1280}
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-[var(--primary)]/75 via-[var(--primary)]/40 to-[var(--primary)]" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[var(--primary)]/85 via-transparent to-transparent" />
+        </div>
 
-        <div className="relative container-x pb-24 md:pb-32 pt-32">
-          <p className="eyebrow mb-6">Established in Canada · Connected to the World</p>
-          <h1 className="font-display text-4xl md:text-6xl lg:text-7xl leading-[1.02] max-w-4xl text-balance">
-            Empowering the Next Generation of Chinese Canadian Business Leadership
-          </h1>
-          <p className="mt-8 max-w-2xl text-lg text-white/80 leading-relaxed">
-            Connecting entrepreneurs, innovators, and industry leaders through collaboration, community
-            engagement, and international business opportunities across Canada and beyond.
-          </p>
-          <div className="mt-10 flex flex-wrap gap-4">
+        <div className="relative container-wide pb-28 md:pb-36 pt-40 w-full">
+          {/* Slide A copy */}
+          <div className="hero-slide-a">
+            <p className="eyebrow mb-6">Executive Leadership · Established in Canada</p>
+            <h1 className="font-display text-4xl md:text-6xl lg:text-[88px] leading-[1.02] max-w-5xl text-balance">
+              Empowering the Next Generation of Chinese Canadian Business Leadership
+            </h1>
+            <p className="mt-8 max-w-2xl text-lg text-white/80 leading-relaxed">
+              Connecting entrepreneurs, innovators, and industry leaders through collaboration, community
+              engagement, and international business opportunities across Canada and beyond.
+            </p>
+          </div>
+          {/* Slide B copy (absolutely overlaid) */}
+          <div className="hero-slide-b absolute inset-x-0 top-40 container-wide">
+            <p className="eyebrow mb-6">Global Business Collaboration</p>
+            <h1 className="font-display text-4xl md:text-6xl lg:text-[88px] leading-[1.02] max-w-5xl text-balance">
+              Building Stronger Connections Between Canadian and Global Markets
+            </h1>
+            <p className="mt-8 max-w-2xl text-lg text-white/80 leading-relaxed">
+              Creating opportunities for innovation, entrepreneurship, leadership, and international
+              collaboration through meaningful business relationships.
+            </p>
+          </div>
+
+          <div className="mt-10 flex flex-wrap gap-4 relative">
             <Link to="/membership" className="btn btn-gold">
               Become a Member <ArrowRight size={16} />
             </Link>
@@ -132,34 +163,53 @@ function HomePage() {
         </div>
       </section>
 
-      {/* EVENTS */}
-      <section className="py-24 md:py-32">
-        <div className="container-x">
-          <div className="flex flex-wrap items-end justify-between gap-6 mb-14">
-            <div>
-              <p className="eyebrow mb-5">Convenings</p>
-              <h2 className="font-display text-3xl md:text-5xl leading-[1.1]">Upcoming Events</h2>
-            </div>
+      {/* FEATURED EVENT — editorial */}
+      <section className="py-28 md:py-36 bg-[var(--cream)]">
+        <div className="container-wide">
+          <div className="flex items-end justify-between gap-6 mb-12">
+            <p className="eyebrow">{featuredEventData.category}</p>
             <Link to="/events" className="text-sm tracking-wide text-[var(--primary)] border-b border-[var(--gold)] pb-1">
               View All Events
             </Link>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {events.map((e) => (
-              <article key={e.slug} className="group hover-lift bg-white border border-[var(--border)]">
-                <div className="aspect-[4/3] overflow-hidden">
-                  <img src={e.image} alt={e.title} loading="lazy" width={1280} height={896} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                </div>
-                <div className="p-7">
-                  <p className="text-[11px] uppercase tracking-[0.22em] text-[var(--gold)]">{e.date}</p>
-                  <h3 className="font-display text-2xl mt-3 leading-tight">{e.title}</h3>
-                  <p className="mt-4 text-sm leading-relaxed text-[var(--ink-soft)]">{e.description}</p>
-                  <p className="mt-5 text-xs text-[var(--ink-soft)]">{e.location}</p>
-                </div>
-              </article>
-            ))}
-          </div>
+          <article className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-stretch">
+            <div className="lg:col-span-7 relative overflow-hidden bg-[var(--primary)] aspect-[4/3] lg:aspect-auto lg:min-h-[620px]">
+              <img
+                src={featuredEventData.image}
+                alt={featuredEventData.title}
+                loading="lazy"
+                width={1600}
+                height={1200}
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[var(--primary)]/60 via-transparent to-transparent" />
+              <div className="absolute bottom-6 left-6 text-white text-[11px] uppercase tracking-[0.22em]">
+                {featuredEventData.location}
+              </div>
+            </div>
+            <div className="lg:col-span-5 flex flex-col justify-center">
+              <p className="text-[11px] uppercase tracking-[0.28em] text-[var(--gold)]">{featuredEventData.date}</p>
+              <h2 className="font-display text-4xl md:text-5xl mt-5 leading-[1.05] text-balance">
+                {featuredEventData.title}
+              </h2>
+              <div className="mt-6 w-12 h-px bg-[var(--gold)]" />
+              <p className="mt-7 text-[15px] leading-relaxed text-[var(--ink-soft)]">
+                {featuredEventData.shortDescription}
+              </p>
+              <dl className="mt-8 grid grid-cols-2 gap-y-4 text-sm">
+                <dt className="text-[11px] uppercase tracking-[0.22em] text-[var(--ink-soft)]">Date</dt>
+                <dd className="text-[var(--ink)]">{featuredEventData.date}</dd>
+                <dt className="text-[11px] uppercase tracking-[0.22em] text-[var(--ink-soft)]">Venue</dt>
+                <dd className="text-[var(--ink)]">{featuredEventData.location}</dd>
+              </dl>
+              <div className="mt-10">
+                <Link to="/events" className="btn btn-primary">
+                  Reserve Your Spot <ArrowRight size={16} />
+                </Link>
+              </div>
+            </div>
+          </article>
         </div>
       </section>
 
