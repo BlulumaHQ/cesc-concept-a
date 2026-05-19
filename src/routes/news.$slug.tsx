@@ -63,7 +63,7 @@ function ArticlePage() {
 
         <div className="container-x max-w-3xl py-20">
           <div className="space-y-7 text-[17px] leading-[1.8] text-[var(--ink)]">
-            {article.body.map((p, i) => (<p key={i}>{p}</p>))}
+            {article.body.map((p: string, i: number) => (<p key={i}>{p}</p>))}
           </div>
           <div className="mt-16 border-t border-[var(--border)] pt-8">
             <Link to="/news" className="text-sm border-b border-[var(--gold)] pb-1">← All Articles</Link>

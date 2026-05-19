@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useRouterState } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
-import logo from "@/assets/cesc-logo.png";
+import logo from "@/assets/cesc-logo-horizontal.png";
 
 const NAV = [
   { to: "/", label: "Home" },
@@ -9,8 +9,8 @@ const NAV = [
   { to: "/leadership", label: "Leadership" },
   { to: "/membership", label: "Membership" },
   { to: "/events", label: "Events" },
-  { to: "/news", label: "News & Insights" },
-  { to: "/community-impact", label: "Community Impact" },
+  { to: "/news", label: "News" },
+  { to: "/community-impact", label: "Impact" },
   { to: "/partnership", label: "Partnership" },
   { to: "/contact", label: "Contact" },
 ] as const;
@@ -41,20 +41,33 @@ export function SiteHeader() {
           : "bg-[var(--background)]/95 backdrop-blur-md border-b border-[var(--border)]"
       }`}
     >
-      <div className="container-x flex items-center justify-between h-20">
-        <Link to="/" className="flex items-center gap-3">
-          <img src={logo} alt="CESC" className="h-11 w-auto" />
-          <span className={`hidden md:block text-[11px] leading-tight tracking-[0.18em] uppercase ${textClass}`}>
-            Chinese Enterprises<br />Society of Canada
+      <div className="container-wide flex items-center justify-between h-24 md:h-28 gap-4">
+        <Link
+          to="/"
+          className="flex items-center shrink-0"
+          aria-label="CESC — Chinese Enterprises Society of Canada"
+        >
+          <span
+            className={`inline-flex items-center px-4 py-2.5 transition-colors duration-500 ${
+              transparent ? "bg-white/95 shadow-sm" : "bg-transparent"
+            }`}
+          >
+            <img
+              src={logo}
+              alt="CESC — Chinese Enterprises Society of Canada"
+              width={1344}
+              height={303}
+              className="block h-[44px] md:h-[52px] lg:h-[60px] w-auto"
+            />
           </span>
         </Link>
 
-        <nav className="hidden xl:flex items-center gap-7">
+        <nav className="hidden xl:flex items-center justify-center flex-1 gap-5 2xl:gap-9 px-3">
           {NAV.map((item) => (
             <Link
               key={item.to}
               to={item.to}
-              className={`text-[13px] tracking-wide transition-colors ${textClass} hover:text-[var(--gold)]`}
+              className={`nav-link font-sans text-[11px] 2xl:text-[12px] uppercase tracking-[0.18em] whitespace-nowrap transition-colors ${textClass} hover:text-[var(--gold)]`}
               activeProps={{ className: "text-[var(--gold)]" }}
               activeOptions={{ exact: item.to === "/" }}
             >
@@ -63,10 +76,10 @@ export function SiteHeader() {
           ))}
         </nav>
 
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-3 justify-end">
           <Link
             to="/membership"
-            className={`hidden md:inline-flex btn ${transparent ? "btn-gold" : "btn-primary"}`}
+            className={`hidden md:inline-flex btn px-5 py-3 text-[11px] uppercase tracking-[0.18em] whitespace-nowrap ${transparent ? "btn-gold" : "btn-primary"}`}
           >
             Become a Member
           </Link>
@@ -76,14 +89,14 @@ export function SiteHeader() {
             onClick={() => setOpen((v) => !v)}
             className={`xl:hidden p-2 ${textClass}`}
           >
-            {open ? <X size={22} /> : <Menu size={22} />}
+            {open ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
       </div>
 
       {open && (
         <div className="xl:hidden bg-[var(--primary)] text-white">
-          <nav className="container-x py-6 flex flex-col gap-4">
+          <nav className="container-wide py-6 flex flex-col gap-4">
             {NAV.map((item) => (
               <Link
                 key={item.to}

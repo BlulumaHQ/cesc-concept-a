@@ -96,7 +96,8 @@
 }
 
 @layer components {
-  .container-x { @apply mx-auto w-full max-w-[1240px] px-6 md:px-10; }
+  .container-x { @apply mx-auto w-full max-w-[1440px] px-6 md:px-10; }
+  .container-wide { @apply mx-auto w-full max-w-[1560px] px-5 md:px-7 lg:px-8; }
 
   .eyebrow {
     @apply text-xs uppercase tracking-[0.22em] font-medium;
@@ -134,6 +135,34 @@
 
   .hover-lift { transition: transform .5s ease, box-shadow .5s ease; }
   .hover-lift:hover { transform: translateY(-4px); }
+
+  .nav-link {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 4px;
+  }
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    height: 1px;
+    background: var(--gold);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .5s cubic-bezier(.2,.7,.2,1);
+  }
+  .nav-link:hover::after,
+  .nav-link[data-status="active"]::after { transform: scaleX(1); }
+}
+
+@layer utilities {
+  @keyframes heroFade {
+    0%, 45% { opacity: 1; }
+    55%, 95% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  .hero-slide-a { animation: heroFade 14s ease-in-out infinite; }
+  .hero-slide-b { animation: heroFade 14s ease-in-out infinite; animation-delay: -7s; }
 }
 
 @layer utilities {
