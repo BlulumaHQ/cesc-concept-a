@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useRouterState } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
-import logo from "@/assets/cesc-logo.png";
+import logo from "@/assets/cesc-logo-horizontal.png";
 
 const NAV = [
   { to: "/", label: "Home" },
@@ -41,20 +41,21 @@ export function SiteHeader() {
           : "bg-[var(--background)]/95 backdrop-blur-md border-b border-[var(--border)]"
       }`}
     >
-      <div className="container-x flex items-center justify-between h-20">
-        <Link to="/" className="flex items-center gap-3">
-          <img src={logo} alt="CESC" className="h-11 w-auto" />
-          <span className={`hidden md:block text-[11px] leading-tight tracking-[0.18em] uppercase ${textClass}`}>
-            Chinese Enterprises<br />Society of Canada
-          </span>
+      <div className="container-wide grid grid-cols-[auto_1fr_auto] items-center h-24 md:h-28 gap-6">
+        <Link to="/" className="flex items-center shrink-0" aria-label="CESC — Chinese Enterprises Society of Canada">
+          <img
+            src={logo}
+            alt="CESC — Chinese Enterprises Society of Canada"
+            className="h-16 md:h-20 lg:h-[88px] w-auto object-contain object-left scale-[1.35] origin-left"
+          />
         </Link>
 
-        <nav className="hidden xl:flex items-center gap-7">
+        <nav className="hidden xl:flex items-center justify-center gap-10">
           {NAV.map((item) => (
             <Link
               key={item.to}
               to={item.to}
-              className={`text-[13px] tracking-wide transition-colors ${textClass} hover:text-[var(--gold)]`}
+              className={`nav-link font-sans text-[12px] uppercase tracking-[0.22em] transition-colors ${textClass} hover:text-[var(--gold)]`}
               activeProps={{ className: "text-[var(--gold)]" }}
               activeOptions={{ exact: item.to === "/" }}
             >
@@ -63,10 +64,10 @@ export function SiteHeader() {
           ))}
         </nav>
 
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-3 justify-end">
           <Link
             to="/membership"
-            className={`hidden md:inline-flex btn ${transparent ? "btn-gold" : "btn-primary"}`}
+            className={`hidden md:inline-flex btn px-7 py-3.5 text-[12px] uppercase tracking-[0.22em] ${transparent ? "btn-gold" : "btn-primary"}`}
           >
             Become a Member
           </Link>
@@ -76,14 +77,14 @@ export function SiteHeader() {
             onClick={() => setOpen((v) => !v)}
             className={`xl:hidden p-2 ${textClass}`}
           >
-            {open ? <X size={22} /> : <Menu size={22} />}
+            {open ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
       </div>
 
       {open && (
         <div className="xl:hidden bg-[var(--primary)] text-white">
-          <nav className="container-x py-6 flex flex-col gap-4">
+          <nav className="container-wide py-6 flex flex-col gap-4">
             {NAV.map((item) => (
               <Link
                 key={item.to}
