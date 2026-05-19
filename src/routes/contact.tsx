@@ -29,7 +29,7 @@ function ContactPage() {
             </div>
             <div>
               <p className="eyebrow mb-3">Email</p>
-              <p className="flex gap-3 text-[var(--ink-soft)]"><Mail size={16} className="mt-1 text-[var(--gold)]" /> info@cesccanada.org</p>
+              <p className="flex gap-3 text-[var(--ink-soft)]"><Mail size={16} className="mt-1 text-[var(--gold)]" /> info@cescglobal.org</p>
             </div>
             <div>
               <p className="eyebrow mb-3">Phone</p>
