@@ -41,7 +41,7 @@ export function SiteHeader() {
           : "bg-[var(--background)]/95 backdrop-blur-md border-b border-[var(--border)]"
       }`}
     >
-      <div className="container-wide grid grid-cols-[auto_1fr_auto] items-center h-24 md:h-28 gap-6">
+      <div className="container-wide flex items-center justify-between h-24 md:h-28 gap-4">
         <Link
           to="/"
           className="flex items-center shrink-0"
@@ -63,12 +63,12 @@ export function SiteHeader() {
           </span>
         </Link>
 
-        <nav className="hidden xl:flex items-center justify-center gap-10">
+        <nav className="hidden xl:flex items-center justify-center flex-1 gap-7 2xl:gap-10 px-4">
           {NAV.map((item) => (
             <Link
               key={item.to}
               to={item.to}
-              className={`nav-link font-sans text-[12px] uppercase tracking-[0.22em] transition-colors ${textClass} hover:text-[var(--gold)]`}
+              className={`nav-link font-sans text-[11px] 2xl:text-[12px] uppercase tracking-[0.18em] whitespace-nowrap transition-colors ${textClass} hover:text-[var(--gold)]`}
               activeProps={{ className: "text-[var(--gold)]" }}
               activeOptions={{ exact: item.to === "/" }}
             >
@@ -80,7 +80,7 @@ export function SiteHeader() {
         <div className="flex items-center gap-3 justify-end">
           <Link
             to="/membership"
-            className={`hidden md:inline-flex btn px-7 py-3.5 text-[12px] uppercase tracking-[0.22em] ${transparent ? "btn-gold" : "btn-primary"}`}
+            className={`hidden md:inline-flex btn px-5 py-3 text-[11px] uppercase tracking-[0.18em] whitespace-nowrap ${transparent ? "btn-gold" : "btn-primary"}`}
           >
             Become a Member
           </Link>
