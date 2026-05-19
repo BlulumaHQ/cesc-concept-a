@@ -62,7 +62,7 @@ export function SiteHeader() {
           </span>
         </Link>
 
-        <nav className="hidden xl:flex items-center justify-center flex-1 gap-7 2xl:gap-10 px-4">
+        <nav className="hidden xl:flex items-center justify-center flex-1 gap-5 2xl:gap-9 px-3">
           {NAV.map((item) => (
             <Link
               key={item.to}
