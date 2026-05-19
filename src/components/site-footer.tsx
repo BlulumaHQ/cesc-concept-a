@@ -1,22 +1,22 @@
 import { Link } from "@tanstack/react-router";
 import { Mail, MapPin, Phone } from "lucide-react";
-import logo from "@/assets/cesc-logo.png";
+import logo from "@/assets/cesc-logo-horizontal.png";
 
 export function SiteFooter() {
   return (
     <footer className="bg-[var(--primary)] text-white/85 mt-24">
-      <div className="container-x py-20 grid gap-12 md:grid-cols-12">
-        <div className="md:col-span-4">
-          <img src={logo} alt="CESC" className="h-14 w-auto bg-white/5 p-2 rounded-sm" />
-          <p className="mt-6 text-sm leading-relaxed text-white/70 max-w-sm">
+      <div className="container-wide py-24 grid gap-16 md:grid-cols-12">
+        <div className="md:col-span-5">
+          <div className="bg-white/95 rounded-sm px-6 py-5 inline-block">
+            <img src={logo} alt="CESC — Chinese Enterprises Society of Canada" className="h-16 md:h-20 w-auto object-contain" />
+          </div>
+          <p className="mt-8 text-sm leading-relaxed text-white/70 max-w-md">
             CESC Chinese Enterprises Society of Canada is dedicated to fostering leadership, entrepreneurship,
             innovation, and meaningful business collaboration across Canada and international communities.
           </p>
         </div>
 
-        <div className="md:col-span-2" aria-hidden="true" />
-
-        <div className="md:col-span-2">
+        <div className="md:col-span-2 md:col-start-7">
           <h4 className="font-sans text-[11px] uppercase tracking-[0.22em] text-[var(--gold)] mb-5">Navigation</h4>
           <ul className="space-y-3 text-sm">
             <li><Link to="/about" className="hover:text-white">About</Link></li>
@@ -47,7 +47,7 @@ export function SiteFooter() {
       </div>
 
       <div className="border-t border-white/10">
-        <div className="container-x py-6 flex flex-col md:flex-row gap-3 justify-between items-center text-xs text-white/60">
+        <div className="container-wide py-6 flex flex-col md:flex-row gap-3 justify-between items-center text-xs text-white/60">
           <p>© 2026 CESC Chinese Enterprises Society of Canada. All rights reserved.</p>
           <p>
             Web Design by{" "}
