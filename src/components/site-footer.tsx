@@ -40,8 +40,9 @@ export function SiteFooter() {
           <h4 className="font-sans text-[11px] uppercase tracking-[0.22em] text-[var(--gold)] mb-5">Contact</h4>
           <ul className="space-y-3 text-sm">
             <li className="flex gap-2"><MapPin size={14} className="mt-1 shrink-0 text-[var(--gold)]" /> Vancouver, BC, Canada</li>
-            <li className="flex gap-2"><Mail size={14} className="mt-1 shrink-0 text-[var(--gold)]" /> info@cescglobal.org</li>
+            <li className="flex gap-2"><Mail size={14} className="mt-1 shrink-0 text-[var(--gold)]" /><a href="mailto:info@cescglobal.org" className="hover:text-white">info@cescglobal.org</a></li>
             <li className="flex gap-2"><Phone size={14} className="mt-1 shrink-0 text-[var(--gold)]" /> (604) 555-0188</li>
+            <li className="flex gap-2"><a href="https://cescglobal.org" className="hover:text-white text-[var(--gold)]">cescglobal.org</a></li>
           </ul>
         </div>
       </div>

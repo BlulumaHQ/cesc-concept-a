@@ -97,6 +97,10 @@ function MembershipPage() {
           <p className="text-[var(--ink-soft)] leading-relaxed mb-10">
             Memberships are reviewed on a rolling basis. Share a few details about yourself and our team will be in touch.
           </p>
+          <p className="text-sm text-[var(--ink-soft)] mb-10">
+            Prefer email? Write to{" "}
+            <a href="mailto:membership@cescglobal.org" className="text-[var(--primary)] border-b border-[var(--gold)]">membership@cescglobal.org</a>.
+          </p>
           <MembershipForm />
         </div>
       </section>
