@@ -5,6 +5,9 @@ import leader4 from "@/assets/leader-4.jpg";
 import eventSummit from "@/assets/event-summit.jpg";
 import eventGala from "@/assets/event-gala.jpg";
 import eventInnovation from "@/assets/event-innovation.jpg";
+import eventPanel from "@/assets/event-panel.jpg";
+import eventRoundtable from "@/assets/event-roundtable.jpg";
+import featuredEvent from "@/assets/featured-event.jpg";
 import blog1 from "@/assets/blog-1.jpg";
 import blog2 from "@/assets/blog-2.jpg";
 import blog3 from "@/assets/blog-3.jpg";
@@ -36,34 +39,65 @@ export const leaders = [
   },
 ];
 
-export const events = [
-  {
-    slug: "2026-summit",
-    title: "2026 Business Leadership Summit",
-    date: "March 12, 2026",
-    location: "Fairmont Pacific Rim, Vancouver",
-    image: eventSummit,
-    description:
-      "A premier networking and leadership forum bringing together entrepreneurs, executives, investors, and community leaders across Canada.",
-  },
+export const featuredEventData = {
+  slug: "2026-leadership-summit",
+  category: "Featured Event",
+  title: "2026 CESC Business Leadership Summit",
+  date: "September 18, 2026",
+  location: "Vancouver Convention Centre",
+  image: featuredEvent,
+  shortDescription:
+    "Join entrepreneurs, executives, investors, and community leaders for an evening of networking, leadership discussions, and international business collaboration focused on the future of Canadian entrepreneurship.",
+  longDescription:
+    "A premier gathering designed to connect entrepreneurs, executives, innovators, and business leaders through meaningful networking, leadership discussions, and international collaboration opportunities.",
+  agenda: [
+    { time: "5:30 PM", item: "Executive Reception & Networking" },
+    { time: "6:30 PM", item: "Keynote: The Future of Canadian Entrepreneurship" },
+    { time: "7:15 PM", item: "Leadership Panel — Global Markets & Innovation" },
+    { time: "8:30 PM", item: "Gala Dinner & Member Roundtables" },
+  ],
+  speakers: [
+    "Senior Executives from Canada's leading enterprises",
+    "International business leaders from Asia-Pacific markets",
+    "Founders shaping the next decade of innovation",
+  ],
+};
+
+export const pastEvents = [
   {
     slug: "executive-gala",
     title: "CESC Executive Networking Gala",
-    date: "May 24, 2026",
+    date: "May 2025",
     location: "Shangri-La Hotel, Vancouver",
     image: eventGala,
-    description:
-      "An evening of meaningful business networking, collaboration, and community celebration featuring distinguished guest speakers and industry leaders.",
   },
   {
     slug: "innovation-forum",
     title: "Innovation & Entrepreneurship Forum",
-    date: "September 18, 2026",
+    date: "November 2024",
     location: "Vancouver Convention Centre",
     image: eventInnovation,
-    description:
-      "A forward-looking discussion on emerging business trends, technology innovation, and the future of entrepreneurship in Canada.",
   },
+  {
+    slug: "leadership-panel",
+    title: "Cross-Cultural Business Leadership Panel",
+    date: "September 2024",
+    location: "Fairmont Pacific Rim, Vancouver",
+    image: eventPanel,
+  },
+  {
+    slug: "asian-roundtable",
+    title: "Canadian Asian Business Roundtable",
+    date: "April 2024",
+    location: "Four Seasons, Toronto",
+    image: eventRoundtable,
+  },
+];
+
+// Backwards compatibility for any remaining imports
+export const events = [
+  { ...featuredEventData, description: featuredEventData.shortDescription, image: eventSummit },
+  ...pastEvents.map((e) => ({ ...e, description: "" })),
 ];
 
 export const articles = [
