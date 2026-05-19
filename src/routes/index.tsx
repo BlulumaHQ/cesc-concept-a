@@ -61,16 +61,18 @@ function HomePage() {
               engagement, and international business opportunities across Canada and beyond.
             </p>
           </div>
-          {/* Slide B copy (absolutely overlaid) */}
-          <div className="hero-slide-b absolute inset-x-0 top-40 container-wide">
-            <p className="eyebrow mb-6">Global Business Collaboration</p>
-            <h1 className="font-display text-4xl md:text-6xl lg:text-[88px] leading-[1.02] max-w-5xl text-balance">
-              Building Stronger Connections Between Canadian and Global Markets
-            </h1>
-            <p className="mt-8 max-w-2xl text-lg text-white/80 leading-relaxed">
-              Creating opportunities for innovation, entrepreneurship, leadership, and international
-              collaboration through meaningful business relationships.
-            </p>
+          {/* Slide B copy (absolutely overlaid, aligned to slide A) */}
+          <div className="hero-slide-b absolute inset-x-0 top-0 pt-40 px-6 md:px-8 lg:px-10">
+            <div className="mx-auto w-full max-w-[1560px]">
+              <p className="eyebrow mb-6">Global Business Collaboration</p>
+              <h1 className="font-display text-4xl md:text-6xl lg:text-[88px] leading-[1.02] max-w-5xl text-balance">
+                Building Stronger Connections Between Canadian and Global Markets
+              </h1>
+              <p className="mt-8 max-w-2xl text-lg text-white/80 leading-relaxed">
+                Creating opportunities for innovation, entrepreneurship, leadership, and international
+                collaboration through meaningful business relationships.
+              </p>
+            </div>
           </div>
 
           <div className="mt-10 flex flex-wrap gap-4 relative">
