@@ -10,7 +10,9 @@ export const Route = createFileRoute("/contact")({
       { name: "description", content: "Get in touch with the CESC team in Vancouver, BC, Canada." },
       { property: "og:title", content: "Contact CESC" },
       { property: "og:description", content: "We welcome inquiries from members, partners, and the wider community." },
+      { property: "og:url", content: "https://cescglobal.org/contact" },
     ],
+    links: [{ rel: "canonical", href: "https://cescglobal.org/contact" }],
   }),
   component: ContactPage,
 });
@@ -29,7 +31,14 @@ function ContactPage() {
             </div>
             <div>
               <p className="eyebrow mb-3">Email</p>
-              <p className="flex gap-3 text-[var(--ink-soft)]"><Mail size={16} className="mt-1 text-[var(--gold)]" /> info@cesccanada.org</p>
+              <p className="flex gap-3 text-[var(--ink-soft)]"><Mail size={16} className="mt-1 text-[var(--gold)]" /><a href="mailto:info@cescglobal.org" className="hover:text-[var(--primary)]">info@cescglobal.org</a></p>
+              <p className="flex gap-3 text-[var(--ink-soft)] mt-2"><Mail size={16} className="mt-1 text-[var(--gold)]" /><a href="mailto:membership@cescglobal.org" className="hover:text-[var(--primary)]">membership@cescglobal.org</a></p>
+              <p className="flex gap-3 text-[var(--ink-soft)] mt-2"><Mail size={16} className="mt-1 text-[var(--gold)]" /><a href="mailto:events@cescglobal.org" className="hover:text-[var(--primary)]">events@cescglobal.org</a></p>
+              <p className="flex gap-3 text-[var(--ink-soft)] mt-2"><Mail size={16} className="mt-1 text-[var(--gold)]" /><a href="mailto:partnerships@cescglobal.org" className="hover:text-[var(--primary)]">partnerships@cescglobal.org</a></p>
+            </div>
+            <div>
+              <p className="eyebrow mb-3">Website</p>
+              <p className="text-[var(--ink-soft)]"><a href="https://cescglobal.org" className="hover:text-[var(--primary)]">cescglobal.org</a></p>
             </div>
             <div>
               <p className="eyebrow mb-3">Phone</p>

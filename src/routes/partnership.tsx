@@ -59,7 +59,7 @@ function PartnershipPage() {
       <section className="py-24 text-center">
         <div className="container-x max-w-xl">
           <h2 className="font-display text-3xl md:text-4xl">Start a partnership conversation.</h2>
-          <p className="mt-4 text-[var(--ink-soft)]">Reach our partnerships team at <a href="mailto:partners@cesccanada.org" className="text-[var(--primary)] border-b border-[var(--gold)]">partners@cesccanada.org</a>.</p>
+          <p className="mt-4 text-[var(--ink-soft)]">Reach our partnerships team at <a href="mailto:partnerships@cescglobal.org" className="text-[var(--primary)] border-b border-[var(--gold)]">partnerships@cescglobal.org</a>.</p>
         </div>
       </section>
     </SiteLayout>

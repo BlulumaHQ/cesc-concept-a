@@ -77,6 +77,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:title", content: "CESC — Chinese Enterprises Society of Canada" },
       { property: "og:description", content: "Empowering the next generation of Chinese Canadian business leadership through collaboration, mentorship, and international opportunity." },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://cescglobal.org" },
+      { property: "og:site_name", content: "CESC — Chinese Enterprises Society of Canada" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
       { name: "twitter:title", content: "CESC — Chinese Enterprises Society of Canada" },
@@ -91,6 +93,24 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         rel: "stylesheet",
         href: appCss,
+      },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "CESC — Chinese Enterprises Society of Canada",
+          url: "https://cescglobal.org",
+          email: "info@cescglobal.org",
+          address: {
+            "@type": "PostalAddress",
+            addressLocality: "Vancouver",
+            addressRegion: "BC",
+            addressCountry: "CA",
+          },
+        }),
       },
     ],
   }),

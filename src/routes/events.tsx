@@ -52,9 +52,12 @@ function EventsPage() {
               <p className="mt-7 text-[15px] leading-relaxed text-[var(--ink-soft)]">
                 {featuredEventData.longDescription}
               </p>
-              <button type="button" className="btn btn-primary mt-10 self-start">
+              <a href="mailto:events@cescglobal.org" className="btn btn-primary mt-10 self-start">
                 Reserve Your Spot <ArrowRight size={16} />
-              </button>
+              </a>
+              <p className="mt-4 text-xs text-[var(--ink-soft)]">
+                Event inquiries: <a href="mailto:events@cescglobal.org" className="border-b border-[var(--gold)]">events@cescglobal.org</a>
+              </p>
             </div>
           </article>
 
