@@ -42,12 +42,22 @@ export function SiteHeader() {
       }`}
     >
       <div className="container-wide grid grid-cols-[auto_1fr_auto] items-center h-24 md:h-28 gap-6">
-        <Link to="/" className="flex items-center shrink-0" aria-label="CESC — Chinese Enterprises Society of Canada">
-          <img
-            src={logo}
-            alt="CESC — Chinese Enterprises Society of Canada"
-            className="h-16 md:h-20 lg:h-[88px] w-auto object-contain object-left scale-[1.35] origin-left"
-          />
+        <Link
+          to="/"
+          className="flex items-center shrink-0"
+          aria-label="CESC — Chinese Enterprises Society of Canada"
+        >
+          <span
+            className={`inline-flex items-center px-4 py-2 transition-colors duration-500 ${
+              transparent ? "bg-white/95" : "bg-transparent"
+            }`}
+          >
+            <img
+              src={logo}
+              alt="CESC — Chinese Enterprises Society of Canada"
+              className="h-14 md:h-16 lg:h-[72px] w-auto object-contain"
+            />
+          </span>
         </Link>
 
         <nav className="hidden xl:flex items-center justify-center gap-10">
