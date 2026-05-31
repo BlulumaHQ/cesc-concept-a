@@ -63,10 +63,13 @@ for (const entry of readdirSync(clientDir)) {
 rmSync(clientDir, { recursive: true, force: true });
 rmSync(serverDir, { recursive: true, force: true });
 
-const redirectsDest = join(dist, "_redirects");
-if (!existsSync(redirectsDest)) {
-  copyFileSync("public/_redirects", redirectsDest);
-  console.log("Copied public/_redirects → dist/_redirects");
+// Cloudflare Pages SPA fallback: serve index.html for unmatched routes via 404.html.
+// Avoids _redirects "infinite loop" rejection from `/* /index.html 200`.
+const indexHtml = join(dist, "index.html");
+const notFoundHtml = join(dist, "404.html");
+if (existsSync(indexHtml)) {
+  copyFileSync(indexHtml, notFoundHtml);
+  console.log("Wrote dist/404.html (SPA fallback)");
 }
 
 function countFiles(dir) {
