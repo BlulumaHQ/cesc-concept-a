@@ -10,6 +10,18 @@ import blog1 from "@/assets/blog-1.jpg";
 import blog2 from "@/assets/blog-2.jpg";
 import blog3 from "@/assets/blog-3.jpg";
 
+// News articles
+import newsBridge from "@/assets/news/news-bridge-china.jpg";
+import newsDalian from "@/assets/news/news-dalian.jpg";
+import newsLaos from "@/assets/news/news-laos-consul.jpg";
+import newsSco from "@/assets/news/news-sco-trade.jpg";
+import newsUk from "@/assets/news/news-uk-consulate.jpg";
+import newsMorocco from "@/assets/news/news-morocco-consul.jpg";
+import newsLosBeans from "@/assets/news/news-los-beans.jpg";
+import newsFairbrothers from "@/assets/news/news-fairbrothers.jpg";
+import newsZhangJian from "@/assets/news/news-zhang-jian.jpg";
+import newsPmCarney from "@/assets/news/news-pm-carney.jpg";
+
 // 10th Term Board of Directors
 import lennyLi from "@/assets/board/lenny-li.jpg";
 import davidTan from "@/assets/board/david-tan.png";
