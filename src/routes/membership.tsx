@@ -3,6 +3,7 @@ import { SiteLayout } from "@/components/site-layout";
 import { PageHero } from "@/components/page-hero";
 import { Check } from "lucide-react";
 import eventGala from "@/assets/event-gala.jpg";
+import { useT } from "@/lib/i18n";
 
 export const Route = createFileRoute("/membership")({
   head: () => ({
@@ -32,6 +33,7 @@ const TIERS = [
 ];
 
 function MembershipPage() {
+  const t = useT();
   return (
     <SiteLayout>
       <PageHero
@@ -43,15 +45,15 @@ function MembershipPage() {
       <section className="py-24">
         <div className="container-x grid md:grid-cols-2 gap-16 items-start">
           <div>
-            <p className="eyebrow mb-5">Member Benefits</p>
+            <p className="eyebrow mb-5">{t("Member Benefits")}</p>
             <h2 className="font-display text-3xl md:text-4xl leading-tight mb-8">
-              What you gain as a CESC member.
+              {t("What you gain as a CESC member.")}
             </h2>
             <ul className="space-y-4">
               {BENEFITS.map((b) => (
                 <li key={b} className="flex gap-3 items-start text-[15px]">
                   <Check size={18} className="mt-0.5 text-[var(--gold)] shrink-0" />
-                  <span>{b}</span>
+                  <span>{t(b)}</span>
                 </li>
               ))}
             </ul>
@@ -65,22 +67,22 @@ function MembershipPage() {
       <section className="py-24 bg-white border-y border-[var(--border)]">
         <div className="container-x">
           <div className="text-center max-w-2xl mx-auto mb-14">
-            <p className="eyebrow mb-5">Tiers</p>
-            <h2 className="font-display text-3xl md:text-4xl">Choose the membership that fits your journey.</h2>
+            <p className="eyebrow mb-5">{t("Tiers")}</p>
+            <h2 className="font-display text-3xl md:text-4xl">{t("Choose the membership that fits your journey.")}</h2>
           </div>
           <div className="grid md:grid-cols-3 gap-6">
-            {TIERS.map((t) => (
+            {TIERS.map((tier) => (
               <div
-                key={t.name}
-                className={`p-10 border ${t.featured ? "bg-[var(--primary)] text-white border-[var(--gold)]" : "bg-[var(--background)] border-[var(--border)]"}`}
+                key={tier.name}
+                className={`p-10 border ${tier.featured ? "bg-[var(--primary)] text-white border-[var(--gold)]" : "bg-[var(--background)] border-[var(--border)]"}`}
               >
-                <p className={`text-[11px] uppercase tracking-[0.22em] ${t.featured ? "text-[var(--gold)]" : "text-[var(--gold)]"}`}>{t.name}</p>
-                <p className="font-display text-2xl mt-3">{t.price}</p>
-                <p className={`mt-4 text-sm leading-relaxed ${t.featured ? "text-white/75" : "text-[var(--ink-soft)]"}`}>{t.desc}</p>
+                <p className={`text-[11px] uppercase tracking-[0.22em] ${tier.featured ? "text-[var(--gold)]" : "text-[var(--gold)]"}`}>{t(tier.name)}</p>
+                <p className="font-display text-2xl mt-3">{t(tier.price)}</p>
+                <p className={`mt-4 text-sm leading-relaxed ${tier.featured ? "text-white/75" : "text-[var(--ink-soft)]"}`}>{t(tier.desc)}</p>
                 <ul className="mt-6 space-y-2 text-sm">
-                  {t.perks.map((p) => (
+                  {tier.perks.map((p) => (
                     <li key={p} className="flex gap-2">
-                      <Check size={14} className="mt-0.5 text-[var(--gold)]" /> {p}
+                      <Check size={14} className="mt-0.5 text-[var(--gold)]" /> {t(p)}
                     </li>
                   ))}
                 </ul>
@@ -92,13 +94,13 @@ function MembershipPage() {
 
       <section className="py-24">
         <div className="container-x max-w-3xl">
-          <p className="eyebrow mb-5">Apply</p>
-          <h2 className="font-display text-3xl md:text-4xl leading-tight mb-8">Apply for Membership</h2>
+          <p className="eyebrow mb-5">{t("Apply")}</p>
+          <h2 className="font-display text-3xl md:text-4xl leading-tight mb-8">{t("Apply for Membership")}</h2>
           <p className="text-[var(--ink-soft)] leading-relaxed mb-10">
-            Memberships are reviewed on a rolling basis. Share a few details about yourself and our team will be in touch.
+            {t("Memberships are reviewed on a rolling basis. Share a few details about yourself and our team will be in touch.")}
           </p>
           <p className="text-sm text-[var(--ink-soft)] mb-10">
-            Prefer email? Write to{" "}
+            {t("Prefer email? Write to")}{" "}
             <a href="mailto:membership@cescglobal.org" className="text-[var(--primary)] border-b border-[var(--gold)]">membership@cescglobal.org</a>.
           </p>
           <MembershipForm />
@@ -109,18 +111,19 @@ function MembershipPage() {
 }
 
 function MembershipForm() {
+  const t = useT();
   return (
     <form className="grid md:grid-cols-2 gap-5" onSubmit={(e) => e.preventDefault()}>
-      <Field label="Full Name" name="name" />
-      <Field label="Email" name="email" type="email" />
-      <Field label="Company" name="company" />
-      <Field label="Title" name="title" />
-      <Field label="Industry" name="industry" className="md:col-span-2" />
+      <Field label={t("Full Name")} name="name" />
+      <Field label={t("Email")} name="email" type="email" />
+      <Field label={t("Company")} name="company" />
+      <Field label={t("Title")} name="title" />
+      <Field label={t("Industry")} name="industry" className="md:col-span-2" />
       <div className="md:col-span-2">
-        <label className="block text-[11px] uppercase tracking-[0.22em] text-[var(--ink-soft)] mb-2">Tell us about your interest in CESC</label>
+        <label className="block text-[11px] uppercase tracking-[0.22em] text-[var(--ink-soft)] mb-2">{t("Tell us about your interest in CESC")}</label>
         <textarea rows={5} className="w-full bg-white border border-[var(--border)] px-4 py-3 text-sm focus:outline-none focus:border-[var(--gold)]" />
       </div>
-      <button className="btn btn-primary md:col-span-2 justify-self-start mt-2" type="submit">Submit Application</button>
+      <button className="btn btn-primary md:col-span-2 justify-self-start mt-2" type="submit">{t("Submit Application")}</button>
     </form>
   );
 }
