@@ -1,9 +1,11 @@
 import eventSummit from "@/assets/event-summit.jpg";
-import eventGala from "@/assets/event-gala.jpg";
-import eventInnovation from "@/assets/event-innovation.jpg";
-import eventPanel from "@/assets/event-panel.jpg";
-import eventRoundtable from "@/assets/event-roundtable.jpg";
 import featuredEvent from "@/assets/featured-event.jpg";
+import eventRomania from "@/assets/event-romania-day.jpg";
+import eventSummerRetreat from "@/assets/event-summer-retreat.jpg";
+import eventJulyJourney from "@/assets/event-july-journey.jpg";
+import eventMexicoSummit from "@/assets/event-mexico-summit.jpg";
+import eventAnnualGala from "@/assets/event-annual-gala-2025.jpg";
+import eventLionsGateGala from "@/assets/event-lions-gate-gala.jpg";
 import blog1 from "@/assets/blog-1.jpg";
 import blog2 from "@/assets/blog-2.jpg";
 import blog3 from "@/assets/blog-3.jpg";
@@ -217,32 +219,46 @@ export const featuredEventData = {
 
 export const pastEvents = [
   {
-    slug: "executive-gala",
-    title: "CESC Executive Networking Gala",
-    date: "May 2025",
-    location: "Shangri-La Hotel, Vancouver",
-    image: eventGala,
+    slug: "2025-romania-national-day",
+    title: "2025 Romania Food & Wine National Day Celebration",
+    date: "November 5, 2025",
+    location: "Vancouver, BC",
+    image: eventRomania,
   },
   {
-    slug: "innovation-forum",
-    title: "Innovation & Entrepreneurship Forum",
-    date: "November 2024",
-    location: "Vancouver Convention Centre",
-    image: eventInnovation,
+    slug: "2025-board-summer-retreat",
+    title: "10th Term Board Summer Retreat",
+    date: "September 18, 2025",
+    location: "Greater Vancouver",
+    image: eventSummerRetreat,
   },
   {
-    slug: "leadership-panel",
-    title: "Cross-Cultural Business Leadership Panel",
-    date: "September 2024",
-    location: "Fairmont Pacific Rim, Vancouver",
-    image: eventPanel,
+    slug: "2025-cesc-july-journey",
+    title: "CESC July Journey — A Trip of Connection & Empowerment",
+    date: "August 4, 2025",
+    location: "China",
+    image: eventJulyJourney,
   },
   {
-    slug: "asian-roundtable",
-    title: "Canadian Asian Business Roundtable",
-    date: "April 2024",
-    location: "Four Seasons, Toronto",
-    image: eventRoundtable,
+    slug: "2025-mexico-investment-summit",
+    title: "Mexico Trade & Investment Summit — Bridging North American Opportunities",
+    date: "March 13, 2025",
+    location: "Vancouver, BC",
+    image: eventMexicoSummit,
+  },
+  {
+    slug: "2025-cesc-annual-gala",
+    title: "CESC 2025 Annual Gala",
+    date: "February 4, 2025",
+    location: "Vancouver, BC",
+    image: eventAnnualGala,
+  },
+  {
+    slug: "2024-lions-gate-charity-gala",
+    title: "7th Lions Gate Hospital “Light Up Lions Gate” Charity Gala",
+    date: "November 6, 2024",
+    location: "North Vancouver, BC",
+    image: eventLionsGateGala,
   },
 ];
 
