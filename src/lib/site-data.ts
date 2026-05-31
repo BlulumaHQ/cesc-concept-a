@@ -22,6 +22,13 @@ import newsCarneyMeet from "@/assets/news/news-carney-meet.jpg";
 import newsCarneyPin from "@/assets/news/news-carney-pin.jpg";
 import newsXinxin from "@/assets/news/news-xinxin.jpg";
 import newsNewyork from "@/assets/news/news-newyork-mission.jpg";
+import newsEventForum from "@/assets/news/news-event-forum.jpg";
+import newsEventRomania from "@/assets/news/news-event-romania.jpg";
+import newsEventRetreat from "@/assets/news/news-event-retreat.jpg";
+import newsEventJuly from "@/assets/news/news-event-july.jpg";
+import newsEventMexico from "@/assets/news/news-event-mexico.jpg";
+import newsEventGala from "@/assets/news/news-event-gala.jpg";
+import newsEventLions from "@/assets/news/news-event-lions.jpg";
 
 // 10th Term Board of Directors
 import lennyLi from "@/assets/board/lenny-li.jpg";
@@ -297,6 +304,20 @@ export const articles = [
     ],
   },
   {
+    slug: "2026-vancouver-entrepreneurs-forum-recap",
+    title: "2026 CESC Vancouver Entrepreneurs Forum Successfully Held — A New Chapter for Canada–China Trade",
+    category: "Signature Event",
+    date: "April 12, 2026",
+    image: newsEventForum,
+    excerpt:
+      "The 2026 CESC Vancouver Entrepreneurs Forum convened government officials, industry leaders, and entrepreneurs in Richmond to open a new chapter of Canada–China economic cooperation.",
+    body: [
+      "On April 5, 2026, the 2026 CESC Vancouver Entrepreneurs Forum was successfully held in Richmond, BC, bringing together government officials, industry leaders, and entrepreneurs to chart a new chapter for Canada–China economic and trade cooperation. The forum centered on the development trajectory of Chinese enterprises entering the North American market.",
+      "Mr. Wang Xuewei — President of the Canadian Chinese Entrepreneurs Federation and CEO of the Indigenous International Trade Group of Canada (IITGC) — delivered the keynote, covering Canada's economic landscape, market-entry pathways, and federal and Indigenous-priority procurement opportunities. Honored guests included Commercial Counselor Liang Yanmin (Consulate General of China in Vancouver), Richmond Mayor Malcolm Brodie, and Burnaby City Councillor Wang Baijin.",
+      "A strategic cooperation agreement between CESC and the Canadian Chinese Entrepreneurs Federation was signed on stage, opening a new chapter of resource integration across enterprise services, project matching, policy interpretation, and international market expansion.",
+    ],
+  },
+  {
     slug: "cesc-pin-to-pm-carney",
     title: "CESC Presents Association Pin to Prime Minister Carney — A Symbol of Cooperation",
     category: "Government & Business",
@@ -325,6 +346,34 @@ export const articles = [
     ],
   },
   {
+    slug: "2025-romania-national-day-recap",
+    title: "Celebrating the 2025 Romania Food & Wine National Day",
+    category: "Diplomatic Exchange",
+    date: "November 5, 2025",
+    image: newsEventRomania,
+    excerpt:
+      "CESC joined the Romanian community in Vancouver to celebrate the 2025 Romania Food & Wine National Day, deepening cultural and business ties with the Romanian diplomatic mission.",
+    body: [
+      "CESC was honored to attend the 2025 Romania Food & Wine National Day celebration in Vancouver, joining members of the Romanian community, diplomatic representatives, and local business leaders for an evening dedicated to Romanian culture, gastronomy, and wine traditions.",
+      "The evening showcased Romania's culinary heritage and reflected the country's growing presence in British Columbia. CESC representatives exchanged views with Romanian officials on opportunities for trade, tourism, and cultural collaboration between Canadian enterprises and Romanian partners.",
+      "Participating in this celebration reflects CESC's broader role as a connector between Canada's business community and international partners — building relationships that translate cultural goodwill into long-term economic cooperation.",
+    ],
+  },
+  {
+    slug: "2025-board-summer-retreat-recap",
+    title: "10th Term Board Summer Retreat Held in Greater Vancouver",
+    category: "Association Activity",
+    date: "September 18, 2025",
+    image: newsEventRetreat,
+    excerpt:
+      "The 10th term Board of Directors gathered for the annual summer retreat in Greater Vancouver, strengthening team cohesion and aligning on priorities for the coming year.",
+    body: [
+      "The Board of Directors of CESC's 10th term came together for the annual summer retreat in Greater Vancouver — a dedicated moment for reflection, team-building, and forward planning. The retreat combined outdoor activities with strategy sessions, reinforcing the collaborative spirit that defines the new Council.",
+      "Directors reviewed the Association's progress in the first half of the term, exchanged feedback on member services and signature programs, and aligned on priorities for the year ahead — including international cooperation, member growth, and signature events.",
+      "Beyond strategy, the retreat strengthened personal bonds across the Board — a foundation that allows CESC to operate as a unified team and to deliver consistent value to its members across every sector.",
+    ],
+  },
+  {
     slug: "cesc-attends-pm-carney-vancouver-meet",
     title: "CESC Attends Prime Minister Carney's Vancouver Meet-and-Greet",
     category: "Government & Business",
@@ -336,6 +385,20 @@ export const articles = [
       "CESC representatives were invited to attend a Vancouver meet-and-greet hosted by the Right Honourable Prime Minister Mark Carney, joining business leaders and community representatives in a direct exchange with the federal government. The invitation recognizes the Association's standing as one of British Columbia's most active Chinese Canadian business organizations.",
       "The discussion covered the federal government's economic priorities, the contribution of Chinese Canadian entrepreneurs to Canada's competitiveness, and opportunities for closer collaboration on trade, investment, and community development. CESC members shared perspectives from sectors including health and wellness, real estate, technology, and international trade.",
       "The event reinforced CESC's role as a credible voice for Chinese Canadian enterprise in policy dialogue, and as a platform that channels the experience of its members into the conversation shaping Canada's economic future.",
+    ],
+  },
+  {
+    slug: "2025-cesc-july-journey-recap",
+    title: "CESC July Journey — A Shared Trip of Connection and Empowerment",
+    category: "Association Activity",
+    date: "August 4, 2025",
+    image: newsEventJuly,
+    excerpt:
+      "The CESC July Journey brought members together for a curated trip combining enterprise visits, networking, and shared learning across multiple cities.",
+    body: [
+      "The CESC July Journey took members on a curated, multi-city trip designed to connect and empower — combining enterprise visits, executive meetings, and informal networking into a single program. The journey reflected CESC's signature approach to member engagement: high-quality content delivered through shared experience.",
+      "Throughout the trip, members met with local enterprises, exchanged perspectives on industry trends, and explored concrete opportunities for cross-border collaboration. The shared travel format created space for deeper conversations, peer learning, and the kind of trust that supports long-term business relationships.",
+      "Programs like the July Journey are a core part of CESC's membership value — giving members access to people, places, and ideas they would not easily reach on their own.",
     ],
   },
   {
@@ -381,6 +444,20 @@ export const articles = [
     ],
   },
   {
+    slug: "2025-mexico-investment-summit-recap",
+    title: "Mexico Trade & Investment Summit — Bridging North American Opportunities",
+    category: "International Collaboration",
+    date: "March 13, 2025",
+    image: newsEventMexico,
+    excerpt:
+      "CESC hosted a Mexico Trade & Investment Summit in Vancouver, helping member enterprises map out market-entry pathways across the North American region.",
+    body: [
+      "CESC convened a Mexico Trade & Investment Summit in Vancouver, bringing together members, government representatives, and Mexican business partners to examine the country's role in the broader North American market. The program was designed to give Canadian Chinese enterprises a practical, decision-ready view of the opportunity.",
+      "Sessions covered Mexico's industrial strengths, near-shoring trends, regulatory landscape, and concrete pathways for trade and investment cooperation. Speakers shared real cases of Canadian and Chinese enterprises operating successfully in the Mexican market, and discussed how CESC's network can support members through introductions, due diligence, and on-the-ground partners.",
+      "The summit reflects CESC's commitment to expanding its members' international footprint — providing structured access to high-value markets across the Americas.",
+    ],
+  },
+  {
     slug: "10th-secretariat-introduction",
     title: "New Strength, New Journey — Introducing CESC's 10th Term Secretariat",
     category: "Association Activity",
@@ -392,6 +469,20 @@ export const articles = [
       "Following the inauguration of the 10th term leadership, CESC formally introduced the new Secretariat — the team responsible for the daily operations of the Association, including event programming, member services, financial administration, communications, and partnership coordination with government bodies, consulates, and partner organizations.",
       "Led by Secretary General Tom Yuan, the Secretariat brings together professionals across operations, programming, communications, and member relations. Their mandate is to ensure that CESC's activities translate into tangible value for members — from international delegations and enterprise visits to policy briefings, training sessions, and signature events.",
       "With a strengthened team in place, CESC enters its 10th term ready to scale its programs, deepen its institutional partnerships, and continue serving as a trusted home for Chinese Canadian entrepreneurs in British Columbia and beyond.",
+    ],
+  },
+  {
+    slug: "2025-cesc-annual-gala-recap",
+    title: "CESC 2025 Annual Gala Successfully Held",
+    category: "Signature Event",
+    date: "February 4, 2025",
+    image: newsEventGala,
+    excerpt:
+      "The CESC 2025 Annual Gala brought together members, partners, and honored guests for an evening celebrating a year of achievement and the launch of a new chapter.",
+    body: [
+      "The CESC 2025 Annual Gala was successfully held in Vancouver, gathering members, partner organizations, government representatives, and honored guests for an evening that celebrated a year of achievement and marked the launch of a new chapter for the Association.",
+      "The program recognized member companies whose contributions have strengthened the Association and the broader Chinese Canadian business community, and highlighted CESC's signature programs across international cooperation, enterprise services, and community impact.",
+      "Beyond formalities, the gala created the kind of high-quality networking environment that defines CESC events — connecting entrepreneurs across sectors and laying the groundwork for partnerships that will continue to shape the year ahead.",
     ],
   },
   {
@@ -462,6 +553,20 @@ export const articles = [
       "The Consul General of the Lao People's Democratic Republic in Canada, together with senior officials of the consulate, paid an official visit to CESC. The delegation was welcomed by CESC President Lenny Li and Association leaders for an in-depth exchange on trade and investment opportunities between Canada, the Chinese Canadian business community, and Laos.",
       "Discussions covered priority sectors in the Lao economy, the consulate's role in facilitating business missions, and how CESC's network can support members interested in exploring opportunities in Southeast Asia. Both sides agreed to maintain regular communication and to organize follow-up activities for interested members.",
       "The visit underscores CESC's standing as a meeting point for diplomatic missions and Canadian Chinese enterprises seeking serious, well-structured international cooperation.",
+    ],
+  },
+  {
+    slug: "2024-lions-gate-charity-gala-recap",
+    title: "CESC Supports the 7th Lions Gate Hospital \u201CLight Up Lions Gate\u201D Charity Gala",
+    category: "Community Impact",
+    date: "November 6, 2024",
+    image: newsEventLions,
+    excerpt:
+      "CESC supported the 7th Lions Gate Hospital \u201CLight Up Lions Gate\u201D Charity Gala in North Vancouver, contributing to community healthcare and amplifying the spirit of giving.",
+    body: [
+      "CESC was proud to support the 7th annual Lions Gate Hospital \u201CLight Up Lions Gate\u201D Charity Gala in North Vancouver — an evening dedicated to advancing community healthcare and recognizing the role of business leaders in building stronger communities.",
+      "Members of CESC joined the wider Vancouver community in raising funds for Lions Gate Hospital, contributing to programs that directly benefit patients and families across the North Shore. The Association's participation reflects its long-standing commitment to community impact alongside business and international cooperation.",
+      "Supporting initiatives like Lions Gate Hospital is part of how CESC defines leadership — combining business success with sustained contribution to the communities in which our members live and work.",
     ],
   },
   {

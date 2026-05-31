@@ -110,7 +110,7 @@ function EventsPage() {
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {pastEvents.map((e) => (
+            {pastEvents.slice(0, 4).map((e) => (
               <article key={e.slug} className="group">
                 <div className="aspect-[4/3] overflow-hidden bg-[var(--muted)]">
                   <img src={e.image} alt={e.title} loading="lazy" width={1280} height={896} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />

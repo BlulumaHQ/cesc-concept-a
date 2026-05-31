@@ -18,8 +18,8 @@ export const Route = createFileRoute("/leadership")({
 const GROUPS: { key: Leader["group"]; eyebrow: string; heading: string; cols: string }[] = [
   { key: "President", eyebrow: "10th Term President", heading: "Leading CESC into a new chapter.", cols: "md:grid-cols-1 max-w-2xl mx-auto" },
   { key: "Vice President", eyebrow: "Vice Presidents", heading: "Industry leaders driving CESC forward.", cols: "md:grid-cols-2 lg:grid-cols-3" },
-  { key: "Secretary General", eyebrow: "Secretary General", heading: "Coordinating operations and partnerships.", cols: "md:grid-cols-1 max-w-2xl mx-auto" },
-  { key: "Mentor", eyebrow: "CESC Mentors", heading: "Distinguished advisors and industry icons.", cols: "md:grid-cols-2" },
+  { key: "Secretary General", eyebrow: "Secretary General", heading: "Coordinating operations and partnerships.", cols: "md:grid-cols-2 lg:grid-cols-3" },
+  { key: "Mentor", eyebrow: "CESC Mentors", heading: "Distinguished advisors and industry icons.", cols: "md:grid-cols-2 lg:grid-cols-3" },
 ];
 
 function LeadershipPage() {

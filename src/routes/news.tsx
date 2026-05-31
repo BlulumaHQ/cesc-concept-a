@@ -104,6 +104,7 @@ function NewsPage() {
                   <p className="text-[11px] uppercase tracking-[0.22em] text-[var(--gold)]">{a.category} · {a.date}</p>
                   <h3 className="font-display text-xl mt-3 leading-tight group-hover:text-[var(--secondary)]">{a.title}</h3>
                   <p className="mt-3 text-[var(--ink-soft)] leading-relaxed text-sm">{a.excerpt}</p>
+                  <span className="mt-4 inline-block text-xs uppercase tracking-[0.2em] border-b border-[var(--gold)] pb-1">Read Article</span>
                 </div>
               </Link>
             ))}
