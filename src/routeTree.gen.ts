@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as SecretariatRouteImport } from './routes/secretariat'
 import { Route as PartnershipRouteImport } from './routes/partnership'
 import { Route as NewsRouteImport } from './routes/news'
 import { Route as MembershipRouteImport } from './routes/membership'
@@ -24,6 +25,11 @@ import { Route as NewsSlugRouteImport } from './routes/news.$slug'
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
   path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SecretariatRoute = SecretariatRouteImport.update({
+  id: '/secretariat',
+  path: '/secretariat',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PartnershipRoute = PartnershipRouteImport.update({
@@ -87,6 +93,7 @@ export interface FileRoutesByFullPath {
   '/membership': typeof MembershipRoute
   '/news': typeof NewsRouteWithChildren
   '/partnership': typeof PartnershipRoute
+  '/secretariat': typeof SecretariatRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/news/$slug': typeof NewsSlugRoute
 }
@@ -100,6 +107,7 @@ export interface FileRoutesByTo {
   '/membership': typeof MembershipRoute
   '/news': typeof NewsRouteWithChildren
   '/partnership': typeof PartnershipRoute
+  '/secretariat': typeof SecretariatRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/news/$slug': typeof NewsSlugRoute
 }
@@ -114,6 +122,7 @@ export interface FileRoutesById {
   '/membership': typeof MembershipRoute
   '/news': typeof NewsRouteWithChildren
   '/partnership': typeof PartnershipRoute
+  '/secretariat': typeof SecretariatRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/news/$slug': typeof NewsSlugRoute
 }
@@ -129,6 +138,7 @@ export interface FileRouteTypes {
     | '/membership'
     | '/news'
     | '/partnership'
+    | '/secretariat'
     | '/sitemap.xml'
     | '/news/$slug'
   fileRoutesByTo: FileRoutesByTo
@@ -142,6 +152,7 @@ export interface FileRouteTypes {
     | '/membership'
     | '/news'
     | '/partnership'
+    | '/secretariat'
     | '/sitemap.xml'
     | '/news/$slug'
   id:
@@ -155,6 +166,7 @@ export interface FileRouteTypes {
     | '/membership'
     | '/news'
     | '/partnership'
+    | '/secretariat'
     | '/sitemap.xml'
     | '/news/$slug'
   fileRoutesById: FileRoutesById
@@ -169,6 +181,7 @@ export interface RootRouteChildren {
   MembershipRoute: typeof MembershipRoute
   NewsRoute: typeof NewsRouteWithChildren
   PartnershipRoute: typeof PartnershipRoute
+  SecretariatRoute: typeof SecretariatRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
 }
 
@@ -179,6 +192,13 @@ declare module '@tanstack/react-router' {
       path: '/sitemap.xml'
       fullPath: '/sitemap.xml'
       preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/secretariat': {
+      id: '/secretariat'
+      path: '/secretariat'
+      fullPath: '/secretariat'
+      preLoaderRoute: typeof SecretariatRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/partnership': {
@@ -274,8 +294,19 @@ const rootRouteChildren: RootRouteChildren = {
   MembershipRoute: MembershipRoute,
   NewsRoute: NewsRouteWithChildren,
   PartnershipRoute: PartnershipRoute,
+  SecretariatRoute: SecretariatRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
