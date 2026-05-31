@@ -42,7 +42,7 @@ export function SiteHeader() {
           : "bg-[var(--background)]/95 backdrop-blur-md border-b border-[var(--border)]"
       }`}
     >
-      <div className="container-wide flex items-center justify-between h-24 md:h-28 gap-4">
+      <div className="container-wide flex items-center justify-between h-28 md:h-32 gap-4">
         <Link
           to="/"
           className="flex items-center shrink-0"
@@ -53,7 +53,7 @@ export function SiteHeader() {
             alt="CESC — Chinese Enterprises Society of Canada"
             width={1344}
             height={303}
-            className="block h-[44px] md:h-[52px] lg:h-[60px] w-auto"
+            className="block h-[52px] md:h-[60px] lg:h-[68px] w-auto"
           />
         </Link>
 
@@ -62,7 +62,7 @@ export function SiteHeader() {
             <Link
               key={item.to}
               to={item.to}
-              className={`nav-link font-sans text-[11px] 2xl:text-[12px] uppercase tracking-[0.18em] whitespace-nowrap transition-colors ${textClass} hover:text-[var(--gold)]`}
+              className={`nav-link font-sans text-[13px] 2xl:text-[14px] uppercase tracking-[0.18em] whitespace-nowrap transition-colors ${textClass} hover:text-[var(--gold)]`}
               activeProps={{ className: "text-[var(--gold)]" }}
               activeOptions={{ exact: item.to === "/" }}
             >
@@ -74,7 +74,7 @@ export function SiteHeader() {
         <div className="flex items-center gap-3 justify-end">
           <Link
             to="/membership"
-            className={`hidden md:inline-flex btn px-5 py-3 text-[11px] uppercase tracking-[0.18em] whitespace-nowrap ${transparent ? "btn-gold" : "btn-primary"}`}
+            className={`hidden md:inline-flex btn px-6 py-3.5 text-[12px] uppercase tracking-[0.18em] whitespace-nowrap ${transparent ? "btn-gold" : "btn-primary"}`}
           >
             Become a Member
           </Link>
@@ -84,7 +84,7 @@ export function SiteHeader() {
             onClick={() => setOpen((v) => !v)}
             className={`xl:hidden p-2 ${textClass}`}
           >
-            {open ? <X size={24} /> : <Menu size={24} />}
+            {open ? <X size={26} /> : <Menu size={26} />}
           </button>
         </div>
       </div>
