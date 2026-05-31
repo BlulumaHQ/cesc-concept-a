@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { useMemo } from "react";
 import { ArrowUpRight, ArrowRight } from "lucide-react";
 import { SiteLayout } from "@/components/site-layout";
 import { leaders, articles, featuredEventData } from "@/lib/site-data";
@@ -143,10 +144,7 @@ function HomePage() {
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {leaders
-              .filter((l) => l.group === "President" || l.group === "Vice President" || l.group === "Secretary General")
-              .slice(0, 4)
-              .map((l) => (
+            {featuredLeaders.map((l) => (
               <article key={l.name} className="group hover-lift">
                 <div className="aspect-[3/4] overflow-hidden bg-[var(--secondary)]">
                   <img
