@@ -30,7 +30,7 @@ const NAV: NavItem[] = [
       { to: "/partnership", label: "Partnership" },
     ],
   },
-  { type: "link", to: "/membership", label: "Membership" },
+  
   { type: "link", to: "/contact", label: "Contact" },
 ];
 
