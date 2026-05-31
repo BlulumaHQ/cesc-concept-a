@@ -339,7 +339,6 @@ export const articles = [
       "The event reinforced CESC's role as a credible voice for Chinese Canadian enterprise in policy dialogue, and as a platform that channels the experience of its members into the conversation shaping Canada's economic future.",
     ],
   },
-  },
   {
     slug: "zhang-jian-sales-masterclass",
     title: "CESC Joins Zhang Jian's Sales Masterclass — Insights on Selling Through a Changing Era",
