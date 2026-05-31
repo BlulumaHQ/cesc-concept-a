@@ -284,18 +284,61 @@ export const events = [
 
 export const articles = [
   {
-    slug: "pm-carney-meets-cesc-delegates",
-    title: "Canadian Prime Minister Meets with Distinguished CESC Representatives",
-    category: "Government & Business",
-    date: "June 22, 2025",
-    image: newsPmCarney,
+    slug: "tri-region-ny-business-mission",
+    title: "Tri-Region Alliance Launches New York Business Mission — New Opportunities in Energy Storage and AI",
+    category: "International Collaboration",
+    date: "May 7, 2026",
+    image: newsNewyork,
     excerpt:
-      "Canadian Prime Minister Mark Carney met with CESC representatives during his Vancouver visit, recognizing the Association's contribution to the local economy and to Canada–China business ties.",
+      "CESC joined partners from across three regions to launch a New York business mission, opening new collaboration channels in the energy storage and artificial intelligence sectors.",
     body: [
-      "During his official visit to Vancouver, the Right Honourable Prime Minister Mark Carney met with a delegation of distinguished representatives from the Canadian Entrepreneurs Society of Canada (CESC), acknowledging the Association's active role in supporting Chinese Canadian entrepreneurs and strengthening cross-border economic cooperation.",
-      "The CESC delegation, led by President Lenny Li, presented the Association's signature pin to the Prime Minister as a symbol of partnership between the Chinese Canadian business community and the federal government. Members shared CESC's ongoing work in international trade facilitation, member services, and community contribution across British Columbia.",
-      "The meeting reinforced CESC's commitment to acting as a trusted bridge between Canadian enterprises and the wider Asia-Pacific market, and to continuing to support policy dialogue, investment promotion, and entrepreneur development in Canada.",
+      "CESC took part in a high-level tri-region business mission to New York, joining forces with partner organizations to explore industrial cooperation in two of today's most strategic sectors — energy storage and artificial intelligence. The delegation met with American counterparts, investors, and technology operators to evaluate joint opportunities across the value chain.",
+      "Discussions focused on building a practical pipeline of projects in next-generation battery technology, grid-scale storage, and AI-driven industrial applications. Participants explored how the combined networks of the three regions can support members in accessing the North American market with credible local partners, capital, and operational know-how.",
+      "The mission marks a new phase of CESC's international cooperation strategy — moving from association-to-association exchanges to concrete, project-level collaboration that creates measurable value for member enterprises.",
     ],
+  },
+  {
+    slug: "cesc-pin-to-pm-carney",
+    title: "CESC Presents Association Pin to Prime Minister Carney — A Symbol of Cooperation",
+    category: "Government & Business",
+    date: "December 29, 2025",
+    image: newsCarneyPin,
+    excerpt:
+      "President Lenny Li presented the CESC pin to the Right Honourable Prime Minister Mark Carney, marking a symbolic moment of partnership between the Association and the federal government.",
+    body: [
+      "On behalf of the Association, CESC President Lenny Li presented the CESC pin to the Right Honourable Prime Minister Mark Carney as a symbol of the long-standing partnership between Chinese Canadian entrepreneurs and the Government of Canada. The gesture recognized the federal government's openness to dialogue with the business community and reinforced CESC's role as a trusted convenor.",
+      "The exchange underscored the Association's commitment to supporting policy dialogue, investment promotion, and entrepreneurship development in Canada, and to ensuring that the voice of Chinese Canadian enterprises is consistently represented at the highest levels of government.",
+      "CESC will continue to act as a bridge between its members, federal and provincial decision-makers, and international partners — translating goodwill into concrete cooperation that benefits Canada's economy and its diverse business communities.",
+    ],
+  },
+  {
+    slug: "xinxin-enterprise-visit",
+    title: "Enterprise Visit: Inside Xinxin — Three Generations of Aesthetic Craft in Vancouver",
+    category: "Enterprise Visit",
+    date: "November 23, 2025",
+    image: newsXinxin,
+    excerpt:
+      "CESC members visited Xinxin Enterprise, a three-generation Chinese Canadian business in Vancouver, to learn how craftsmanship, family stewardship, and entrepreneurial spirit have shaped its journey.",
+    body: [
+      "A CESC delegation visited Xinxin Enterprise, a Chinese Canadian business whose story spans three generations of operation in Vancouver. Hosted by the company's leadership, members toured the working environment and heard first-hand how the family has built a recognizable brand around aesthetics, craftsmanship, and disciplined long-term thinking.",
+      "The visit covered product development, market positioning, talent stewardship, and the lessons of running a multi-generation enterprise in Canada. Members also discussed practical ways for CESC companies to collaborate through joint procurement, channel partnerships, and shared brand-building initiatives.",
+      "The session is part of CESC's ongoing enterprise visit program — taking members inside successful Chinese Canadian businesses to surface real operating insight and to strengthen the fabric of the Association's business network.",
+    ],
+  },
+  {
+    slug: "cesc-attends-pm-carney-vancouver-meet",
+    title: "CESC Attends Prime Minister Carney's Vancouver Meet-and-Greet",
+    category: "Government & Business",
+    date: "August 5, 2025",
+    image: newsCarneyMeet,
+    excerpt:
+      "CESC was invited to attend the Right Honourable Prime Minister Mark Carney's Vancouver meet-and-greet, joining business leaders and community representatives in dialogue with the federal government.",
+    body: [
+      "CESC representatives were invited to attend a Vancouver meet-and-greet hosted by the Right Honourable Prime Minister Mark Carney, joining business leaders and community representatives in a direct exchange with the federal government. The invitation recognizes the Association's standing as one of British Columbia's most active Chinese Canadian business organizations.",
+      "The discussion covered the federal government's economic priorities, the contribution of Chinese Canadian entrepreneurs to Canada's competitiveness, and opportunities for closer collaboration on trade, investment, and community development. CESC members shared perspectives from sectors including health and wellness, real estate, technology, and international trade.",
+      "The event reinforced CESC's role as a credible voice for Chinese Canadian enterprise in policy dialogue, and as a platform that channels the experience of its members into the conversation shaping Canada's economic future.",
+    ],
+  },
   },
   {
     slug: "zhang-jian-sales-masterclass",
