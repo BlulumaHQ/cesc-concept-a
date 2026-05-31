@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site-layout";
 import { PageHero } from "@/components/page-hero";
 import { Check } from "lucide-react";
-import eventGala from "@/assets/event-gala.jpg";
+import cescLogo from "@/assets/cesc-logo-main.png";
 import { useT } from "@/lib/i18n";
 
 export const Route = createFileRoute("/membership")({
@@ -58,8 +58,8 @@ function MembershipPage() {
               ))}
             </ul>
           </div>
-          <div className="aspect-[4/5] overflow-hidden">
-            <img src={eventGala} alt="" loading="lazy" width={1280} height={896} className="w-full h-full object-cover" />
+          <div className="aspect-square flex items-center justify-center bg-white p-8">
+            <img src={cescLogo} alt="CESC — Chinese Enterprises Society of Canada" loading="lazy" width={1024} height={1024} className="w-full h-full object-contain" />
           </div>
         </div>
       </section>
