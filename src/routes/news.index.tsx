@@ -3,6 +3,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site-layout";
 import { PageHero } from "@/components/page-hero";
 import { articles } from "@/lib/site-data";
+import { useT } from "@/lib/i18n";
 
 export const Route = createFileRoute("/news/")({
   head: () => ({
@@ -17,6 +18,7 @@ export const Route = createFileRoute("/news/")({
 });
 
 function NewsPage() {
+  const t = useT();
   const categories = useMemo(() => {
     const set = new Set<string>();
     articles.forEach((a) => set.add(a.category));
@@ -43,7 +45,7 @@ function NewsPage() {
       <section className="pt-16 pb-6">
         <div className="container-x">
           <div className="flex flex-wrap items-center gap-2">
-            <span className="text-[11px] uppercase tracking-[0.22em] text-[var(--ink-soft)] mr-2">Filter</span>
+            <span className="text-[11px] uppercase tracking-[0.22em] text-[var(--ink-soft)] mr-2">{t("Filter")}</span>
             {categories.map((cat) => {
               const active = cat === activeCategory;
               return (
@@ -58,7 +60,7 @@ function NewsPage() {
                       : "bg-white text-[var(--ink)] border-[var(--border)] hover:border-[var(--gold)]")
                   }
                 >
-                  {cat}
+                  {t(cat)}
                 </button>
               );
             })}
@@ -78,17 +80,17 @@ function NewsPage() {
                 <img src={featured.image} alt={featured.title} loading="lazy" width={1280} height={800} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
               </div>
               <div className="md:col-span-5">
-                <p className="text-[11px] uppercase tracking-[0.22em] text-[var(--gold)]">{featured.category} · {featured.date}</p>
-                <h2 className="font-display text-3xl md:text-4xl mt-4 leading-tight group-hover:text-[var(--secondary)]">{featured.title}</h2>
-                <p className="mt-5 text-[var(--ink-soft)] leading-relaxed">{featured.excerpt}</p>
-                <span className="mt-6 inline-block text-sm border-b border-[var(--gold)] pb-1">Read Article</span>
+                <p className="text-[11px] uppercase tracking-[0.22em] text-[var(--gold)]">{t(featured.category)} · {t(featured.date)}</p>
+                <h2 className="font-display text-3xl md:text-4xl mt-4 leading-tight group-hover:text-[var(--secondary)]">{t(featured.title)}</h2>
+                <p className="mt-5 text-[var(--ink-soft)] leading-relaxed">{t(featured.excerpt)}</p>
+                <span className="mt-6 inline-block text-sm border-b border-[var(--gold)] pb-1">{t("Read Article")}</span>
               </div>
             </Link>
           </div>
         </section>
       ) : (
         <section className="py-24">
-          <div className="container-x text-center text-[var(--ink-soft)]">No articles in this category yet.</div>
+          <div className="container-x text-center text-[var(--ink-soft)]">{t("No articles in this category yet.")}</div>
         </section>
       )}
 
@@ -101,10 +103,10 @@ function NewsPage() {
                   <img src={a.image} alt={a.title} loading="lazy" width={1280} height={800} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                 </div>
                 <div className="pt-6">
-                  <p className="text-[11px] uppercase tracking-[0.22em] text-[var(--gold)]">{a.category} · {a.date}</p>
-                  <h3 className="font-display text-xl mt-3 leading-tight group-hover:text-[var(--secondary)]">{a.title}</h3>
-                  <p className="mt-3 text-[var(--ink-soft)] leading-relaxed text-sm">{a.excerpt}</p>
-                  <span className="mt-4 inline-block text-xs uppercase tracking-[0.2em] border-b border-[var(--gold)] pb-1">Read Article</span>
+                  <p className="text-[11px] uppercase tracking-[0.22em] text-[var(--gold)]">{t(a.category)} · {t(a.date)}</p>
+                  <h3 className="font-display text-xl mt-3 leading-tight group-hover:text-[var(--secondary)]">{t(a.title)}</h3>
+                  <p className="mt-3 text-[var(--ink-soft)] leading-relaxed text-sm">{t(a.excerpt)}</p>
+                  <span className="mt-4 inline-block text-xs uppercase tracking-[0.2em] border-b border-[var(--gold)] pb-1">{t("Read Article")}</span>
                 </div>
               </Link>
             ))}

@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { useT } from "@/lib/i18n";
 
 export function PageHero({
   eyebrow,
@@ -13,6 +14,7 @@ export function PageHero({
   image?: string;
   children?: ReactNode;
 }) {
+  const t = useT();
   return (
     <section className="relative pt-40 pb-24 md:pt-48 md:pb-32 overflow-hidden bg-[var(--primary)] text-white">
       {image && (
@@ -26,10 +28,10 @@ export function PageHero({
         </>
       )}
       <div className="relative container-x max-w-[900px]">
-        {eyebrow && <p className="eyebrow mb-6">{eyebrow}</p>}
-        <h1 className="font-display text-4xl md:text-6xl leading-[1.05] text-balance">{title}</h1>
+        {eyebrow && <p className="eyebrow mb-6">{t(eyebrow)}</p>}
+        <h1 className="font-display text-4xl md:text-6xl leading-[1.05] text-balance">{t(title)}</h1>
         {subtitle && (
-          <p className="mt-6 text-lg md:text-xl text-white/75 max-w-2xl leading-relaxed">{subtitle}</p>
+          <p className="mt-6 text-lg md:text-xl text-white/75 max-w-2xl leading-relaxed">{t(subtitle)}</p>
         )}
         {children && <div className="mt-10">{children}</div>}
       </div>

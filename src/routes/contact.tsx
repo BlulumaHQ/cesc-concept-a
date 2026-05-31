@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site-layout";
 import { PageHero } from "@/components/page-hero";
 import { Mail, MapPin, Phone } from "lucide-react";
+import { useT } from "@/lib/i18n";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -18,6 +19,7 @@ export const Route = createFileRoute("/contact")({
 });
 
 function ContactPage() {
+  const t = useT();
   return (
     <SiteLayout>
       <PageHero eyebrow="Contact" title="We welcome inquiries from members, partners, and the wider community." />
@@ -26,37 +28,37 @@ function ContactPage() {
         <div className="container-x grid md:grid-cols-12 gap-16">
           <div className="md:col-span-4 space-y-8">
             <div>
-              <p className="eyebrow mb-3">Headquarters</p>
-              <p className="flex gap-3 text-[var(--ink-soft)]"><MapPin size={16} className="mt-1 text-[var(--gold)]" /> Vancouver, British Columbia, Canada</p>
+              <p className="eyebrow mb-3">{t("Headquarters")}</p>
+              <p className="flex gap-3 text-[var(--ink-soft)]"><MapPin size={16} className="mt-1 text-[var(--gold)]" /> {t("Vancouver, British Columbia, Canada")}</p>
             </div>
             <div>
-              <p className="eyebrow mb-3">Email</p>
+              <p className="eyebrow mb-3">{t("Email")}</p>
               <p className="flex gap-3 text-[var(--ink-soft)]"><Mail size={16} className="mt-1 text-[var(--gold)]" /><a href="mailto:info@cescglobal.org" className="hover:text-[var(--primary)]">info@cescglobal.org</a></p>
               <p className="flex gap-3 text-[var(--ink-soft)] mt-2"><Mail size={16} className="mt-1 text-[var(--gold)]" /><a href="mailto:membership@cescglobal.org" className="hover:text-[var(--primary)]">membership@cescglobal.org</a></p>
               <p className="flex gap-3 text-[var(--ink-soft)] mt-2"><Mail size={16} className="mt-1 text-[var(--gold)]" /><a href="mailto:events@cescglobal.org" className="hover:text-[var(--primary)]">events@cescglobal.org</a></p>
               <p className="flex gap-3 text-[var(--ink-soft)] mt-2"><Mail size={16} className="mt-1 text-[var(--gold)]" /><a href="mailto:partnerships@cescglobal.org" className="hover:text-[var(--primary)]">partnerships@cescglobal.org</a></p>
             </div>
             <div>
-              <p className="eyebrow mb-3">Website</p>
+              <p className="eyebrow mb-3">{t("Website")}</p>
               <p className="text-[var(--ink-soft)]"><a href="https://cescglobal.org" className="hover:text-[var(--primary)]">cescglobal.org</a></p>
             </div>
             <div>
-              <p className="eyebrow mb-3">Phone</p>
+              <p className="eyebrow mb-3">{t("Phone")}</p>
               <p className="flex gap-3 text-[var(--ink-soft)]"><Phone size={16} className="mt-1 text-[var(--gold)]" /> (604) 555-0188</p>
             </div>
           </div>
 
           <form className="md:col-span-8 grid sm:grid-cols-2 gap-5" onSubmit={(e) => e.preventDefault()}>
-            <Field label="Full Name" name="name" />
-            <Field label="Email" name="email" type="email" />
-            <Field label="Company" name="company" />
-            <Field label="Phone" name="phone" />
-            <Field label="Subject" name="subject" className="sm:col-span-2" />
+            <Field label={t("Full Name")} name="name" />
+            <Field label={t("Email")} name="email" type="email" />
+            <Field label={t("Company")} name="company" />
+            <Field label={t("Phone")} name="phone" />
+            <Field label={t("Subject")} name="subject" className="sm:col-span-2" />
             <div className="sm:col-span-2">
-              <label htmlFor="message" className="block text-[11px] uppercase tracking-[0.22em] text-[var(--ink-soft)] mb-2">Message</label>
+              <label htmlFor="message" className="block text-[11px] uppercase tracking-[0.22em] text-[var(--ink-soft)] mb-2">{t("Message")}</label>
               <textarea id="message" name="message" rows={6} className="w-full bg-white border border-[var(--border)] px-4 py-3 text-sm focus:outline-none focus:border-[var(--gold)]" />
             </div>
-            <button className="btn btn-primary sm:col-span-2 justify-self-start" type="submit">Send Message</button>
+            <button className="btn btn-primary sm:col-span-2 justify-self-start" type="submit">{t("Send Message")}</button>
           </form>
         </div>
       </section>

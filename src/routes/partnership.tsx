@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site-layout";
 import { PageHero } from "@/components/page-hero";
 import partner from "@/assets/partnership.jpg";
+import { useT } from "@/lib/i18n";
 
 export const Route = createFileRoute("/partnership")({
   head: () => ({
@@ -16,6 +17,7 @@ export const Route = createFileRoute("/partnership")({
 });
 
 function PartnershipPage() {
+  const t = useT();
   return (
     <SiteLayout>
       <PageHero
@@ -33,9 +35,9 @@ function PartnershipPage() {
             { t: "Institutional Allies", d: "Collaboration with universities, government, and cultural institutions advancing shared priorities." },
           ].map((p) => (
             <div key={p.t} className="border-t border-[var(--gold)] pt-6">
-              <p className="eyebrow mb-3">Tier</p>
-              <h3 className="font-display text-2xl">{p.t}</h3>
-              <p className="mt-3 text-[var(--ink-soft)] leading-relaxed">{p.d}</p>
+              <p className="eyebrow mb-3">{t("Tier")}</p>
+              <h3 className="font-display text-2xl">{t(p.t)}</h3>
+              <p className="mt-3 text-[var(--ink-soft)] leading-relaxed">{t(p.d)}</p>
             </div>
           ))}
         </div>
@@ -43,23 +45,23 @@ function PartnershipPage() {
 
       <section className="py-20 bg-white border-y border-[var(--border)]">
         <div className="container-x max-w-3xl">
-          <p className="eyebrow mb-5">Why Partner With CESC</p>
+          <p className="eyebrow mb-5">{t("Why Partner With CESC")}</p>
           <h2 className="font-display text-3xl md:text-4xl leading-tight">
-            Access a curated community of decision-makers across Canada and Asia-Pacific markets.
+            {t("Access a curated community of decision-makers across Canada and Asia-Pacific markets.")}
           </h2>
           <div className="mt-8 grid sm:grid-cols-2 gap-6 text-[var(--ink-soft)]">
-            <p>Audience built of executives, founders, investors, and senior professionals across high-growth industries.</p>
-            <p>Programs designed for substance — from intimate roundtables to large-scale leadership forums.</p>
-            <p>Year-round visibility through editorial, events, and member communications.</p>
-            <p>Long-term relationships rooted in mutual purpose and measurable impact.</p>
+            <p>{t("Audience built of executives, founders, investors, and senior professionals across high-growth industries.")}</p>
+            <p>{t("Programs designed for substance — from intimate roundtables to large-scale leadership forums.")}</p>
+            <p>{t("Year-round visibility through editorial, events, and member communications.")}</p>
+            <p>{t("Long-term relationships rooted in mutual purpose and measurable impact.")}</p>
           </div>
         </div>
       </section>
 
       <section className="py-24 text-center">
         <div className="container-x max-w-xl">
-          <h2 className="font-display text-3xl md:text-4xl">Start a partnership conversation.</h2>
-          <p className="mt-4 text-[var(--ink-soft)]">Reach our partnerships team at <a href="mailto:partnerships@cescglobal.org" className="text-[var(--primary)] border-b border-[var(--gold)]">partnerships@cescglobal.org</a>.</p>
+          <h2 className="font-display text-3xl md:text-4xl">{t("Start a partnership conversation.")}</h2>
+          <p className="mt-4 text-[var(--ink-soft)]">{t("Reach our partnerships team at")} <a href="mailto:partnerships@cescglobal.org" className="text-[var(--primary)] border-b border-[var(--gold)]">partnerships@cescglobal.org</a>.</p>
         </div>
       </section>
     </SiteLayout>

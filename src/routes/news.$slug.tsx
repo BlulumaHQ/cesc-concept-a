@@ -2,6 +2,7 @@ import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site-layout";
 import { articles } from "@/lib/site-data";
 import { ArrowLeft } from "lucide-react";
+import { useT } from "@/lib/i18n";
 
 export const Route = createFileRoute("/news/$slug")({
   loader: ({ params }) => {
@@ -41,17 +42,18 @@ export const Route = createFileRoute("/news/$slug")({
 
 function ArticlePage() {
   const { article } = Route.useLoaderData();
+  const t = useT();
   return (
     <SiteLayout>
       <article>
         <header className="pt-40 pb-12 bg-[var(--primary)] text-white">
           <div className="container-x max-w-3xl">
             <Link to="/news" className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.22em] text-[var(--gold)] mb-8">
-              <ArrowLeft size={14} /> News & Insights
+              <ArrowLeft size={14} /> {t("News & Insights")}
             </Link>
-            <p className="text-[11px] uppercase tracking-[0.22em] text-[var(--gold)]">{article.category} · {article.date}</p>
-            <h1 className="font-display text-3xl md:text-5xl mt-4 leading-[1.1] text-balance">{article.title}</h1>
-            <p className="mt-6 text-lg text-white/75 leading-relaxed">{article.excerpt}</p>
+            <p className="text-[11px] uppercase tracking-[0.22em] text-[var(--gold)]">{t(article.category)} · {t(article.date)}</p>
+            <h1 className="font-display text-3xl md:text-5xl mt-4 leading-[1.1] text-balance">{t(article.title)}</h1>
+            <p className="mt-6 text-lg text-white/75 leading-relaxed">{t(article.excerpt)}</p>
           </div>
         </header>
 
@@ -63,10 +65,10 @@ function ArticlePage() {
 
         <div className="container-x max-w-3xl py-16">
           <div className="space-y-7 text-[17px] leading-[1.8] text-[var(--ink)]">
-            {article.body.map((p: string, i: number) => (<p key={i}>{p}</p>))}
+            {article.body.map((p: string, i: number) => (<p key={i}>{t(p)}</p>))}
           </div>
           <div className="mt-16 border-t border-[var(--border)] pt-8">
-            <Link to="/news" className="text-sm border-b border-[var(--gold)] pb-1">← All Articles</Link>
+            <Link to="/news" className="text-sm border-b border-[var(--gold)] pb-1">← {t("All Articles")}</Link>
           </div>
         </div>
       </article>
