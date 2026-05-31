@@ -95,6 +95,18 @@
   }
 }
 
+/* Chinese display font: align headings, eyebrows, and decorative labels with logo aesthetic */
+html[lang^="zh"] h1,
+html[lang^="zh"] h2,
+html[lang^="zh"] h3,
+html[lang^="zh"] h4,
+html[lang^="zh"] .font-display,
+html[lang^="zh"] .eyebrow,
+html[lang^="zh"] .nav-link {
+  font-family: "Noto Serif SC", "Source Han Serif SC", "Songti SC", "STSong", serif;
+  letter-spacing: 0.02em;
+}
+
 @layer components {
   .container-x { @apply mx-auto w-full max-w-[1440px] px-6 md:px-10; }
   .container-wide { @apply mx-auto w-full max-w-[1560px] px-5 md:px-7 lg:px-8; }
