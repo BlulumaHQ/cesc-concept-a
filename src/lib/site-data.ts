@@ -17,6 +17,12 @@ import newsLosBeans from "@/assets/news/news-los-beans.jpg";
 import newsFairbrothers from "@/assets/news/news-fairbrothers.jpg";
 import newsZhangJian from "@/assets/news/news-zhang-jian.jpg";
 import newsPmCarney from "@/assets/news/news-pm-carney.jpg";
+import newsAssembly from "@/assets/news/news-10th-assembly.jpg";
+import newsSecretariatIntro from "@/assets/news/news-secretariat-intro.jpg";
+import newsCarneyMeet from "@/assets/news/news-carney-meet.jpg";
+import newsCarneyPin from "@/assets/news/news-carney-pin.jpg";
+import newsXinxin from "@/assets/news/news-xinxin.jpg";
+import newsNewyork from "@/assets/news/news-newyork-mission.jpg";
 
 // 10th Term Board of Directors
 import lennyLi from "@/assets/board/lenny-li.jpg";
