@@ -43,8 +43,15 @@ function PartnershipPage() {
         </div>
       </section>
 
-      <section className="py-20 bg-[var(--sand)] border-y border-[var(--border)]">
-        <div className="container-x max-w-3xl">
+      <section className="relative py-20 bg-[var(--sand)] border-y border-[var(--border)] overflow-hidden">
+        <img
+          src="/images/world-map.png"
+          alt=""
+          aria-hidden
+          className="absolute inset-0 w-full h-full object-cover opacity-40 pointer-events-none"
+          loading="lazy"
+        />
+        <div className="relative container-x max-w-3xl">
           <p className="eyebrow mb-5">{t("Why Partner With CESC")}</p>
           <h2 className="font-display text-3xl md:text-4xl leading-tight">
             {t("Access a curated community of decision-makers across Canada and Asia-Pacific markets.")}
