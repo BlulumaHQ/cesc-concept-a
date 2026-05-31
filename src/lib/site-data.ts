@@ -382,6 +382,34 @@ export const articles = [
     ],
   },
   {
+    slug: "10th-secretariat-introduction",
+    title: "New Strength, New Journey — Introducing CESC's 10th Term Secretariat",
+    category: "Association Activity",
+    date: "February 19, 2025",
+    image: newsSecretariatIntro,
+    excerpt:
+      "CESC introduces the full team of its 10th term Secretariat — the operational engine responsible for member services, event delivery, partnerships, and the day-to-day life of the Association.",
+    body: [
+      "Following the inauguration of the 10th term leadership, CESC formally introduced the new Secretariat — the team responsible for the daily operations of the Association, including event programming, member services, financial administration, communications, and partnership coordination with government bodies, consulates, and partner organizations.",
+      "Led by Secretary General Tom Yuan, the Secretariat brings together professionals across operations, programming, communications, and member relations. Their mandate is to ensure that CESC's activities translate into tangible value for members — from international delegations and enterprise visits to policy briefings, training sessions, and signature events.",
+      "With a strengthened team in place, CESC enters its 10th term ready to scale its programs, deepen its institutional partnerships, and continue serving as a trusted home for Chinese Canadian entrepreneurs in British Columbia and beyond.",
+    ],
+  },
+  {
+    slug: "10th-term-general-assembly",
+    title: "CESC Holds 10th Term General Assembly — A New Chapter for the Association",
+    category: "Association Activity",
+    date: "January 27, 2025",
+    image: newsAssembly,
+    excerpt:
+      "CESC successfully held its 10th term General Assembly, electing a new leadership team to guide the Association into its next stage of development.",
+    body: [
+      "CESC successfully held the 10th term General Assembly, formally electing the Association's new leadership for the years ahead. Mr. Lenny Li was elected President, bringing extensive experience in resource integration across health and wellness, international trade, and global real estate, with a clear mandate to advance CESC's role in Canada–China business cooperation.",
+      "The new Vice Presidents represent a broad cross-section of strategic sectors — including health and wellness, digital entertainment, automotive and energy storage, international real estate and trade, new energy and innovative technology, family wealth and international tax planning, and financial investment. Together they bring the depth of industry expertise and the breadth of network that will define CESC's next chapter.",
+      "The Assembly marked the beginning of a new phase for the Association — one focused on stronger member services, deeper international partnerships, and a clearer voice for Chinese Canadian enterprise in Canada's economic conversation.",
+    ],
+  },
+  {
     slug: "cesc-visits-morocco-honorary-consul",
     title: "Deepening Business Cooperation: CESC Visits the Honorary Consul General of the Kingdom of Morocco",
     category: "Diplomatic Exchange",
