@@ -21,6 +21,12 @@ export const Route = createFileRoute("/")({
 });
 
 function HomePage() {
+  const featuredLeaders = useMemo(() => {
+    const president = leaders.find((l) => l.group === "President");
+    const vps = leaders.filter((l) => l.group === "Vice President");
+    const shuffled = [...vps].sort(() => Math.random() - 0.5).slice(0, 3);
+    return president ? [president, ...shuffled] : shuffled;
+  }, []);
   return (
     <SiteLayout>
       {/* HERO — dual-slide cinematic */}
