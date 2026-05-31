@@ -53,10 +53,11 @@ function EventsPage() {
                 {featuredEventData.longDescription}
               </p>
               <a href="mailto:events@cescglobal.org" className="btn btn-primary mt-10 self-start">
-                Reserve Your Spot <ArrowRight size={16} />
+                Request the Forum Recap <ArrowRight size={16} />
               </a>
               <p className="mt-4 text-xs text-[var(--ink-soft)]">
-                Event inquiries: <a href="mailto:events@cescglobal.org" className="border-b border-[var(--gold)]">events@cescglobal.org</a>
+                For media coverage, photos, or partnership inquiries, contact{" "}
+                <a href="mailto:events@cescglobal.org" className="border-b border-[var(--gold)]">events@cescglobal.org</a>
               </p>
             </div>
           </article>
@@ -75,7 +76,7 @@ function EventsPage() {
               </ul>
             </div>
             <div>
-              <p className="eyebrow mb-5">Keynote Speakers</p>
+              <p className="eyebrow mb-5">Speakers & Honored Guests</p>
               <ul className="space-y-4 text-[14px] text-[var(--ink-soft)] leading-relaxed">
                 {featuredEventData.speakers.map((s) => (
                   <li key={s} className="border-l border-[var(--gold)] pl-4">{s}</li>
@@ -83,11 +84,12 @@ function EventsPage() {
               </ul>
             </div>
             <div>
-              <p className="eyebrow mb-5">Networking Highlights</p>
+              <p className="eyebrow mb-5">Strategic Outcomes</p>
               <p className="text-[14px] text-[var(--ink-soft)] leading-relaxed">
-                Curated introductions with senior executives, founders, and investors across Canada and the
-                Asia-Pacific. Private member roundtables and a formal gala dinner extend the evening into
-                meaningful, long-term business relationships.
+                CESC and the Canadian Chinese Entrepreneurs Federation signed a strategic cooperation
+                agreement to integrate resources across enterprise services, project matching, policy
+                interpretation, and international market expansion — strengthening the influence and
+                competitiveness of Chinese Canadian enterprises across North America.
               </p>
             </div>
           </div>
