@@ -186,26 +186,32 @@ export const secretariat: Leader[] = [
 ];
 
 export const featuredEventData = {
-  slug: "2026-leadership-summit",
-  category: "Featured Event",
-  title: "2026 CESC Business Leadership Summit",
-  date: "September 18, 2026",
-  location: "Vancouver Convention Centre",
+  slug: "2026-vancouver-entrepreneurs-forum",
+  category: "Featured Event · Recap",
+  title: "2026 CESC Vancouver Entrepreneurs Forum",
+  date: "April 5, 2026",
+  location: "Richmond, BC",
   image: featuredEvent,
   shortDescription:
-    "Join entrepreneurs, executives, investors, and community leaders for an evening of networking, leadership discussions, and international business collaboration focused on the future of Canadian entrepreneurship.",
+    "A landmark CESC forum bringing together government officials, industry leaders, and entrepreneurs to explore how Chinese enterprises can expand into the North American market — and to formalize a strategic partnership with the Canadian Chinese Entrepreneurs Federation.",
   longDescription:
-    "A premier gathering designed to connect entrepreneurs, executives, innovators, and business leaders through meaningful networking, leadership discussions, and international collaboration opportunities.",
+    "On April 5, 2026, the 2026 CESC Vancouver Entrepreneurs Forum convened a high-level audience of government officials, business leaders, and entrepreneurs in Richmond, BC. The forum centered on the development trajectory of Chinese enterprises entering North America, with a keynote by Mr. Wang Xuewei — President of the Canadian Chinese Entrepreneurs Federation and CEO of the Indigenous International Trade Group of Canada (IITGC) — covering Canada's economic landscape, market-entry pathways, federal and Indigenous-priority procurement, and practical experience landing in Canada. A strategic cooperation agreement between CESC and the Canadian Chinese Entrepreneurs Federation was signed on stage, opening a new chapter of resource integration across enterprise services, project matching, policy interpretation, and international market expansion.",
   agenda: [
-    { time: "5:30 PM", item: "Executive Reception & Networking" },
-    { time: "6:30 PM", item: "Keynote: The Future of Canadian Entrepreneurship" },
-    { time: "7:15 PM", item: "Leadership Panel — Global Markets & Innovation" },
-    { time: "8:30 PM", item: "Gala Dinner & Member Roundtables" },
+    { time: "Opening", item: "Welcome remarks from CESC President Lenny Li and partner organizations" },
+    { time: "Keynote", item: "Wang Xuewei — Chinese enterprises expanding into the North American market" },
+    { time: "Briefing", item: "Canadian government procurement & Indigenous-priority procurement pathways (IITGC)" },
+    { time: "Signing", item: "CESC × Canadian Chinese Entrepreneurs Federation strategic cooperation agreement" },
+    { time: "Reception", item: "Networking dinner and member roundtables in Richmond" },
   ],
   speakers: [
-    "Senior Executives from Canada's leading enterprises",
-    "International business leaders from Asia-Pacific markets",
-    "Founders shaping the next decade of innovation",
+    "Wang Xuewei (王学玮) — President, Canadian Chinese Entrepreneurs Federation; CEO, IITGC",
+    "Liang Yanmin (梁艳敏) — Commercial Counselor, Consulate General of China in Vancouver",
+    "Malcolm Brodie (马保定) — Mayor of Richmond",
+    "Wang Baijin (王白进) — Burnaby City Councillor",
+    "Lenny Li (李国超) — President, CESC",
+    "Song Xianghou (宋祥厚) — Founding President, CESC",
+    "Jessie Xiao (肖嘉雯) — Executive President, CESC",
+    "David Tan (谈滢) & Jiantian Cui (崔建天) — Vice Presidents, CESC",
   ],
 };
 
