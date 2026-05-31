@@ -55,13 +55,13 @@ function ArticlePage() {
           </div>
         </header>
 
-        <div className="container-x max-w-5xl -mt-2">
+        <div className="container-x max-w-5xl mt-12">
           <div className="aspect-[16/9] overflow-hidden">
             <img src={article.image} alt={article.title} width={1280} height={800} className="w-full h-full object-cover" />
           </div>
         </div>
 
-        <div className="container-x max-w-3xl py-20">
+        <div className="container-x max-w-3xl py-16">
           <div className="space-y-7 text-[17px] leading-[1.8] text-[var(--ink)]">
             {article.body.map((p: string, i: number) => (<p key={i}>{p}</p>))}
           </div>
