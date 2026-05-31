@@ -42,7 +42,7 @@ export function SiteHeader() {
           : "bg-[var(--background)]/95 backdrop-blur-md border-b border-[var(--border)]"
       }`}
     >
-      <div className="container-wide flex items-center justify-between h-28 md:h-32 gap-4">
+      <div className="container-wide flex items-center justify-between h-[84px] md:h-[96px] gap-4">
         <Link
           to="/"
           className="flex items-center shrink-0"
@@ -53,7 +53,7 @@ export function SiteHeader() {
             alt="CESC — Chinese Enterprises Society of Canada"
             width={1344}
             height={303}
-            className="block h-[52px] md:h-[60px] lg:h-[68px] w-auto"
+            className="block h-[64px] md:h-[76px] lg:h-[84px] w-auto"
           />
         </Link>
 
