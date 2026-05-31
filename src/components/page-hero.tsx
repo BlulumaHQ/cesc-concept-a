@@ -16,7 +16,14 @@ export function PageHero({
 }) {
   const t = useT();
   return (
-    <section className="relative pt-40 pb-24 md:pt-48 md:pb-32 overflow-hidden bg-[var(--primary)] text-white">
+    <section
+      className="relative pt-40 pb-24 md:pt-48 md:pb-32 overflow-hidden bg-[var(--primary)] text-white"
+      style={{
+        backgroundImage: "url(/images/texture-primary.jpg)",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
       {image && (
         <>
           <img

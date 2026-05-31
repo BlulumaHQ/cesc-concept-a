@@ -135,8 +135,15 @@ function HomePage() {
       </section>
 
       {/* LEADERSHIP */}
-      <section className="py-24 md:py-32 bg-[var(--primary)] text-white">
-        <div className="container-x">
+      <section
+        className="relative py-24 md:py-32 bg-[var(--primary)] text-white"
+        style={{
+          backgroundImage: "url(/images/texture-primary.jpg)",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="relative container-x">
           <div className="flex flex-wrap items-end justify-between gap-6 mb-14">
             <div>
               <p className="eyebrow mb-5">{t("The Council")}</p>
