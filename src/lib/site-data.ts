@@ -22,6 +22,13 @@ import newsCarneyMeet from "@/assets/news/news-carney-meet.jpg";
 import newsCarneyPin from "@/assets/news/news-carney-pin.jpg";
 import newsXinxin from "@/assets/news/news-xinxin.jpg";
 import newsNewyork from "@/assets/news/news-newyork-mission.jpg";
+import newsEventForum from "@/assets/news/news-event-forum.jpg";
+import newsEventRomania from "@/assets/news/news-event-romania.jpg";
+import newsEventRetreat from "@/assets/news/news-event-retreat.jpg";
+import newsEventJuly from "@/assets/news/news-event-july.jpg";
+import newsEventMexico from "@/assets/news/news-event-mexico.jpg";
+import newsEventGala from "@/assets/news/news-event-gala.jpg";
+import newsEventLions from "@/assets/news/news-event-lions.jpg";
 
 // 10th Term Board of Directors
 import lennyLi from "@/assets/board/lenny-li.jpg";
