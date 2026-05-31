@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { useEffect, useState } from "react";
 import { ArrowUpRight, ArrowRight } from "lucide-react";
 import { SiteLayout } from "@/components/site-layout";
 import { leaders, articles, featuredEventData } from "@/lib/site-data";
@@ -20,6 +21,14 @@ export const Route = createFileRoute("/")({
 });
 
 function HomePage() {
+  const president = leaders.find((l) => l.group === "President");
+  const vps = leaders.filter((l) => l.group === "Vice President");
+  const [vpPicks, setVpPicks] = useState(() => vps.slice(0, 3));
+  useEffect(() => {
+    setVpPicks([...vps].sort(() => Math.random() - 0.5).slice(0, 3));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+  const featuredLeaders = president ? [president, ...vpPicks] : vpPicks;
   return (
     <SiteLayout>
       {/* HERO — dual-slide cinematic */}
@@ -143,10 +152,7 @@ function HomePage() {
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {leaders
-              .filter((l) => l.group === "President" || l.group === "Vice President" || l.group === "Secretary General")
-              .slice(0, 4)
-              .map((l) => (
+            {featuredLeaders.map((l) => (
               <article key={l.name} className="group hover-lift">
                 <div className="aspect-[3/4] overflow-hidden bg-[var(--secondary)]">
                   <img
