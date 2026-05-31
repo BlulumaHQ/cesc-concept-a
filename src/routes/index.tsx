@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { useMemo } from "react";
+import { useEffect, useState } from "react";
 import { ArrowUpRight, ArrowRight } from "lucide-react";
 import { SiteLayout } from "@/components/site-layout";
 import { leaders, articles, featuredEventData } from "@/lib/site-data";
@@ -21,12 +21,14 @@ export const Route = createFileRoute("/")({
 });
 
 function HomePage() {
-  const featuredLeaders = useMemo(() => {
-    const president = leaders.find((l) => l.group === "President");
-    const vps = leaders.filter((l) => l.group === "Vice President");
-    const shuffled = [...vps].sort(() => Math.random() - 0.5).slice(0, 3);
-    return president ? [president, ...shuffled] : shuffled;
+  const president = leaders.find((l) => l.group === "President");
+  const vps = leaders.filter((l) => l.group === "Vice President");
+  const [vpPicks, setVpPicks] = useState(() => vps.slice(0, 3));
+  useEffect(() => {
+    setVpPicks([...vps].sort(() => Math.random() - 0.5).slice(0, 3));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+  const featuredLeaders = president ? [president, ...vpPicks] : vpPicks;
   return (
     <SiteLayout>
       {/* HERO — dual-slide cinematic */}
