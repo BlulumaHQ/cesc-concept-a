@@ -15,7 +15,10 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     try {
       const stored = localStorage.getItem(STORAGE_KEY);
-      if (stored === "zh" || stored === "en") setLangState(stored);
+      if (stored === "zh" || stored === "en") {
+        setLangState(stored);
+        try { document.documentElement.lang = stored === "zh" ? "zh-CN" : "en"; } catch {}
+      }
     } catch {}
   }, []);
 
