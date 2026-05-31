@@ -3,6 +3,7 @@ import { Link, useRouterState } from "@tanstack/react-router";
 import { Menu, X, ChevronDown } from "lucide-react";
 import logoDark from "@/assets/cesc-logo-header.png";
 import logoLight from "@/assets/cesc-logo-footer.png";
+import { LanguageSwitcher, useT } from "@/lib/i18n";
 
 type NavLink = { to: string; label: string };
 
@@ -40,6 +41,7 @@ function isDropdownActive(items: NavLink[], pathname: string): boolean {
 }
 
 export function SiteHeader() {
+  const t = useT();
   const pathname = useRouterState({ select: (s) => s.location.pathname });
   const isHome = pathname === "/";
   const [scrolled, setScrolled] = useState(false);
@@ -109,7 +111,7 @@ export function SiteHeader() {
                   activeProps={{ className: "text-[var(--gold)]" }}
                   activeOptions={{ exact: item.to === "/" }}
                 >
-                  {item.label}
+                  {t(item.label)}
                 </Link>
               );
             }
@@ -130,7 +132,7 @@ export function SiteHeader() {
                   aria-expanded={isOpen}
                   aria-haspopup="true"
                 >
-                  {item.label}
+                  {t(item.label)}
                   <ChevronDown size={14} className={`transition-transform ${isOpen ? "rotate-180" : ""}`} />
                 </button>
                 {isOpen && (
@@ -147,7 +149,7 @@ export function SiteHeader() {
                           pathname === sub.to ? "text-[var(--gold)]" : "text-[var(--ink)]"
                         } hover:text-[var(--gold)] hover:bg-[var(--muted)]`}
                       >
-                        {sub.label}
+                        {t(sub.label)}
                       </Link>
                     ))}
                   </div>
@@ -158,12 +160,16 @@ export function SiteHeader() {
         </nav>
 
         <div className="flex items-center gap-3 justify-end">
+          {/* Desktop language switcher: between Contact and Become a Member */}
+          <LanguageSwitcher className={`hidden md:inline-flex ${transparent ? "text-white" : "text-[var(--ink)]"}`} />
           <Link
             to="/membership"
             className={`hidden md:inline-flex btn px-6 py-3.5 text-[12px] uppercase tracking-[0.18em] whitespace-nowrap ${transparent ? "btn-gold" : "btn-primary"}`}
           >
-            Become a Member
+            {t("Become a Member")}
           </Link>
+          {/* Mobile language switcher: left of hamburger */}
+          <LanguageSwitcher className={`xl:hidden md:hidden ${textClass}`} />
           <button
             type="button"
             aria-label="Toggle menu"
@@ -189,7 +195,7 @@ export function SiteHeader() {
                     activeProps={{ className: "text-[var(--gold)]" }}
                     activeOptions={{ exact: item.to === "/" }}
                   >
-                    {item.label}
+                    {t(item.label)}
                   </Link>
                 );
               }
@@ -203,7 +209,7 @@ export function SiteHeader() {
                     className="flex items-center justify-between w-full py-2 text-base tracking-wide"
                     aria-expanded={expanded}
                   >
-                    {item.label}
+                    {t(item.label)}
                     <ChevronDown size={16} className={`transition-transform ${expanded ? "rotate-180" : ""}`} />
                   </button>
                   {expanded && (
@@ -214,7 +220,7 @@ export function SiteHeader() {
                           to={sub.to}
                           className={`text-sm tracking-wide py-1.5 ${pathname === sub.to ? "text-[var(--gold)]" : "text-white/80"}`}
                         >
-                          {sub.label}
+                          {t(sub.label)}
                         </Link>
                       ))}
                     </div>
@@ -222,7 +228,7 @@ export function SiteHeader() {
                 </div>
               );
             })}
-            <Link to="/membership" className="btn btn-gold mt-3 w-full">Become a Member</Link>
+            <Link to="/membership" className="btn btn-gold mt-3 w-full">{t("Become a Member")}</Link>
           </nav>
         </div>
       )}
