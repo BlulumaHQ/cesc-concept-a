@@ -229,13 +229,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LeadershipRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/secretariat': {
-      id: '/secretariat'
-      path: '/secretariat'
-      fullPath: '/secretariat'
-      preLoaderRoute: typeof SecretariatRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/events': {
       id: '/events'
       path: '/events'
