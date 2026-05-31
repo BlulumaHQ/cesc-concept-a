@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useRouterState } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
-import logo from "@/assets/cesc-logo-horizontal.png";
+import logo from "@/assets/cesc-logo-header.png";
 
 const NAV = [
   { to: "/", label: "Home" },

@@ -1,15 +1,13 @@
 import { Link } from "@tanstack/react-router";
 import { Mail, MapPin, Phone } from "lucide-react";
-import logo from "@/assets/cesc-logo-horizontal.png";
+import logo from "@/assets/cesc-logo-footer.png";
 
 export function SiteFooter() {
   return (
     <footer className="bg-[var(--primary)] text-white/85 mt-24">
       <div className="container-wide py-24 grid gap-16 md:grid-cols-12">
         <div className="md:col-span-5">
-          <div className="bg-white/95 rounded-sm px-6 py-5 inline-block">
-            <img src={logo} alt="CESC — Chinese Enterprises Society of Canada" className="h-16 md:h-20 w-auto object-contain" />
-          </div>
+          <img src={logo} alt="CESC — Chinese Enterprises Society of Canada" className="h-20 md:h-24 w-auto object-contain" />
           <p className="mt-8 text-sm leading-relaxed text-white/70 max-w-md">
             CESC Chinese Enterprises Society of Canada is dedicated to fostering leadership, entrepreneurship,
             innovation, and meaningful business collaboration across Canada and international communities.
