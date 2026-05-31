@@ -64,7 +64,7 @@ function MembershipPage() {
         </div>
       </section>
 
-      <section className="py-24 bg-white border-y border-[var(--border)]">
+      <section className="py-24 bg-[var(--sand)] border-y border-[var(--border)]">
         <div className="container-x">
           <div className="text-center max-w-2xl mx-auto mb-14">
             <p className="eyebrow mb-5">{t("Tiers")}</p>

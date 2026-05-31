@@ -43,7 +43,7 @@ function PartnershipPage() {
         </div>
       </section>
 
-      <section className="py-20 bg-white border-y border-[var(--border)]">
+      <section className="py-20 bg-[var(--sand)] border-y border-[var(--border)]">
         <div className="container-x max-w-3xl">
           <p className="eyebrow mb-5">{t("Why Partner With CESC")}</p>
           <h2 className="font-display text-3xl md:text-4xl leading-tight">

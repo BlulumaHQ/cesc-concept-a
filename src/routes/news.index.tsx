@@ -95,7 +95,7 @@ function NewsPage() {
       )}
 
       {rest.length > 0 && (
-        <section className="py-20 bg-white border-t border-[var(--border)]">
+        <section className="py-20 bg-[var(--sand)] border-t border-[var(--border)]">
           <div className="container-x grid md:grid-cols-2 lg:grid-cols-3 gap-12">
             {rest.map((a) => (
               <Link key={a.slug} to="/news/$slug" params={{ slug: a.slug }} className="group block">

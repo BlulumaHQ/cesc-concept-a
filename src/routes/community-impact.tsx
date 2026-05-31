@@ -42,7 +42,7 @@ function ImpactPage() {
         </div>
       </section>
 
-      <section className="py-20 bg-white border-y border-[var(--border)]">
+      <section className="py-20 bg-[var(--sand)] border-y border-[var(--border)]">
         <div className="container-x grid md:grid-cols-2 gap-12">
           {[
             { t: "Mentorship Program", d: "Pairing emerging entrepreneurs with experienced executives across industries for one-on-one guidance and long-term development." },

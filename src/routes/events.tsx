@@ -96,7 +96,7 @@ function EventsPage() {
       </section>
 
       {/* PAST EVENTS */}
-      <section className="py-24 md:py-32 bg-white border-t border-[var(--border)]">
+      <section className="py-24 md:py-32 bg-[var(--sand)] border-t border-[var(--border)]">
         <div className="container-wide">
           <div className="flex items-end justify-between gap-6 mb-12">
             <div>
