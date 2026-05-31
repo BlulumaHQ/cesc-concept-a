@@ -46,7 +46,7 @@ function AboutPage() {
         </div>
       </section>
 
-      <section className="py-20 bg-white border-y border-[var(--border)]">
+      <section className="py-20 bg-[var(--sand)] border-y border-[var(--border)]">
         <div className="container-x grid md:grid-cols-2 gap-12">
           <div>
             <p className="eyebrow mb-5">{t("Our Mission")}</p>
