@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { Link, useRouterState } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
-import logo from "@/assets/cesc-logo-header.png";
+import logoDark from "@/assets/cesc-logo-header.png";
+import logoLight from "@/assets/cesc-logo-footer.png";
 
 const NAV = [
   { to: "/", label: "Home" },
@@ -47,19 +48,13 @@ export function SiteHeader() {
           className="flex items-center shrink-0"
           aria-label="CESC — Chinese Enterprises Society of Canada"
         >
-          <span
-            className={`inline-flex items-center px-4 py-2.5 transition-colors duration-500 ${
-              transparent ? "bg-white/95 shadow-sm" : "bg-transparent"
-            }`}
-          >
-            <img
-              src={logo}
-              alt="CESC — Chinese Enterprises Society of Canada"
-              width={1344}
-              height={303}
-              className="block h-[44px] md:h-[52px] lg:h-[60px] w-auto"
-            />
-          </span>
+          <img
+            src={transparent ? logoLight : logoDark}
+            alt="CESC — Chinese Enterprises Society of Canada"
+            width={1344}
+            height={303}
+            className="block h-[44px] md:h-[52px] lg:h-[60px] w-auto"
+          />
         </Link>
 
         <nav className="hidden xl:flex items-center justify-center flex-1 gap-5 2xl:gap-9 px-3">
