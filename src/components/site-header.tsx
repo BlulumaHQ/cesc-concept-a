@@ -84,7 +84,20 @@ export function SiteHeader() {
           : "bg-[var(--background)]/95 backdrop-blur-md border-b border-[var(--border)]"
       }`}
     >
-      <div className="container-wide flex items-center justify-between h-[84px] md:h-[96px] gap-4">
+      {/* Mobile top bar: language switcher only */}
+      <div
+        className={`xl:hidden border-b ${
+          transparent
+            ? "border-white/15 bg-[var(--primary)]/40 backdrop-blur-sm"
+            : "border-[var(--border)] bg-[var(--muted)]/60"
+        }`}
+      >
+        <div className="container-wide flex items-center justify-end h-8">
+          <LanguageSwitcher className={textClass} />
+        </div>
+      </div>
+
+      <div className="container-wide flex items-center justify-between h-[68px] md:h-[96px] gap-4">
         <Link
           to="/"
           className="flex items-center shrink-0"
@@ -95,7 +108,7 @@ export function SiteHeader() {
             alt="CESC — Chinese Enterprises Society of Canada"
             width={1344}
             height={303}
-            className="block h-[64px] md:h-[76px] lg:h-[84px] w-auto"
+            className="block h-[52px] md:h-[76px] lg:h-[84px] w-auto"
           />
         </Link>
 
@@ -161,20 +174,18 @@ export function SiteHeader() {
 
         <div className="flex items-center gap-3 justify-end">
           {/* Desktop language switcher: between Contact and Become a Member */}
-          <LanguageSwitcher className={`hidden md:inline-flex ${transparent ? "text-white" : "text-[var(--ink)]"}`} />
+          <LanguageSwitcher className={`hidden xl:inline-flex ${transparent ? "text-white" : "text-[var(--ink)]"}`} />
           <Link
             to="/membership"
-            className={`hidden md:inline-flex btn px-6 py-3.5 text-[12px] uppercase tracking-[0.18em] whitespace-nowrap ${transparent ? "btn-gold" : "btn-primary"}`}
+            className={`hidden xl:inline-flex btn px-6 py-3.5 text-[12px] uppercase tracking-[0.18em] whitespace-nowrap ${transparent ? "btn-gold" : "btn-primary"}`}
           >
             {t("Become a Member")}
           </Link>
-          {/* Mobile language switcher: left of hamburger */}
-          <LanguageSwitcher className={`xl:hidden md:hidden ${textClass}`} />
           <button
             type="button"
             aria-label="Toggle menu"
             onClick={() => setOpen((v) => !v)}
-            className={`xl:hidden p-2 ${textClass}`}
+            className={`xl:hidden p-2 -mr-2 ${textClass}`}
           >
             {open ? <X size={26} /> : <Menu size={26} />}
           </button>
