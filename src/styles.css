@@ -37,6 +37,7 @@
   --color-gold-soft: var(--gold-soft);
   --color-cream: var(--cream);
   --color-surface: var(--surface);
+  --color-sand: var(--sand);
 }
 
 :root {
@@ -46,6 +47,7 @@
   --foreground: oklch(0.18 0.02 260);       /* #111827 ink */
   --surface: oklch(1 0 0);
   --cream: oklch(0.978 0.005 85);
+  --sand: #E2DCD1;
 
   --primary: #15192E;                       /* deep navy */
   --primary-foreground: oklch(0.98 0.005 85);
