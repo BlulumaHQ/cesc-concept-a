@@ -268,7 +268,7 @@ function HomePage() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-10">
-            {articles.map((a) => (
+            {articles.slice(0, 6).map((a) => (
               <Link
                 key={a.slug}
                 to="/news/$slug"
