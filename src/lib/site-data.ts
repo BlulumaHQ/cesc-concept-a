@@ -1,7 +1,3 @@
-import leader1 from "@/assets/leader-1.jpg";
-import leader2 from "@/assets/leader-2.jpg";
-import leader3 from "@/assets/leader-3.jpg";
-import leader4 from "@/assets/leader-4.jpg";
 import eventSummit from "@/assets/event-summit.jpg";
 import eventGala from "@/assets/event-gala.jpg";
 import eventInnovation from "@/assets/event-innovation.jpg";
@@ -12,30 +8,180 @@ import blog1 from "@/assets/blog-1.jpg";
 import blog2 from "@/assets/blog-2.jpg";
 import blog3 from "@/assets/blog-3.jpg";
 
-export const leaders = [
+// 10th Term Board of Directors
+import lennyLi from "@/assets/board/lenny-li.jpg";
+import davidTan from "@/assets/board/david-tan.png";
+import timChen from "@/assets/board/tim-chen.jpg";
+import frankLiu from "@/assets/board/frank-liu.jpg";
+import jessieXiao from "@/assets/board/jessie-xiao.jpg";
+import jennaLiu from "@/assets/board/jenna-liu.png";
+import jiantianCui from "@/assets/board/jiantian-cui.jpg";
+import bowenLiu from "@/assets/board/bowen-liu.jpg";
+import tomYuanBoard from "@/assets/board/tom-yuan.jpg";
+import lawrencePan from "@/assets/board/lawrence-pan.png";
+import yafuGuo from "@/assets/board/yafu-guo.png";
+
+// 10th Term Secretariat
+import secTomYuan from "@/assets/secretariat/tom-yuan.jpg";
+import secAlysaChen from "@/assets/secretariat/alysa-chen.jpg";
+import secPatrickPan from "@/assets/secretariat/patrick-pan.jpg";
+import secVeraLin from "@/assets/secretariat/vera-lin.jpg";
+import secSylviaLin from "@/assets/secretariat/sylvia-lin.jpg";
+import secAnastasiaLiu from "@/assets/secretariat/anastasia-liu.jpg";
+import secLiliNiu from "@/assets/secretariat/lili-niu.jpg";
+
+export type Leader = {
+  name: string;
+  chineseName?: string;
+  title: string;
+  group: "President" | "Vice President" | "Secretary General" | "Mentor";
+  image: string;
+  bio: string;
+};
+
+export const leaders: Leader[] = [
   {
-    name: "Michael Zhang",
-    title: "Executive Chair",
-    image: leader1,
-    bio: "Michael Zhang is a Canadian entrepreneur and business strategist with over 20 years of experience in international trade, investment partnerships, and community leadership initiatives across North America and Asia.",
+    name: "Lenny Li",
+    chineseName: "李国超",
+    title: "President",
+    group: "President",
+    image: lennyLi,
+    bio: "Elected as President of the 10th term of CESC, Lenny brings deep expertise in resource integration with experience spanning health & wellness, international trade, and global real estate. His leadership and extensive network will drive new growth opportunities and expand CESC's role in Canada–China business collaboration.",
   },
   {
-    name: "Sophia Chen",
-    title: "Director of Community Partnerships",
-    image: leader2,
-    bio: "Sophia Chen specializes in multicultural business development and community engagement, helping organizations foster stronger relationships across diverse industries and communities.",
+    name: "David Tan",
+    chineseName: "谈滢",
+    title: "Vice President",
+    group: "Vice President",
+    image: davidTan,
+    bio: "A leader in the health & wellness industry, David brings strong industry insight that will support CESC members operating in and entering this rapidly growing sector.",
   },
   {
-    name: "Daniel Wu",
-    title: "Director of International Relations",
-    image: leader3,
-    bio: "Daniel Wu focuses on international business collaboration, leadership development, and strategic partnerships connecting Canadian entrepreneurs with global opportunities.",
+    name: "Tim Chen",
+    title: "Vice President",
+    group: "Vice President",
+    image: timChen,
+    bio: "Focused on the digital entertainment industry, Tim brings fresh strategic thinking and new opportunities to open up emerging digital sectors for CESC members.",
   },
   {
-    name: "Kevin Lin",
-    title: "Director of Innovation & Entrepreneurship",
-    image: leader4,
-    bio: "Kevin Lin works closely with startups, founders, and emerging business leaders to support innovation, mentorship, and long-term entrepreneurial growth.",
+    name: "Frank Liu",
+    title: "Vice President",
+    group: "Vice President",
+    image: frankLiu,
+    bio: "Deeply experienced in the North American automotive and energy storage industries, Frank contributes valuable knowledge to advance CESC's work in adjacent sectors.",
+  },
+  {
+    name: "Jessie Xiao",
+    chineseName: "肖嘉雯",
+    title: "Vice President",
+    group: "Vice President",
+    image: jessieXiao,
+    bio: "An investor active across international real estate, import/export, luxury resale, health & wellness, hospitality, and the wine industry, Jessie brings a uniquely diversified perspective to CESC.",
+  },
+  {
+    name: "Jenna Liu",
+    title: "Vice President",
+    group: "Vice President",
+    image: jennaLiu,
+    bio: "Founder of a high-tech enterprise, investor, and ESG advocate focused on new energy, innovative technology, and financial investment. A long-time community contributor advancing CESC's work in emerging industries.",
+  },
+  {
+    name: "Jiantian Cui",
+    chineseName: "崔建天",
+    title: "Vice President",
+    group: "Vice President",
+    image: jiantianCui,
+    bio: "Specialist in family wealth succession, international trust planning, tax optimization, and dividend insurance. Advises entrepreneurs on holding structures and investment strategy, and supports families in shaping a new generation of impact-driven leaders.",
+  },
+  {
+    name: "Bowen Liu",
+    chineseName: "刘博文",
+    title: "Vice President",
+    group: "Vice President",
+    image: bowenLiu,
+    bio: "Focused on financial investment, Bowen helps CESC strengthen investment and financing channels for member enterprises through deep market insight and industry expertise.",
+  },
+  {
+    name: "Tom Yuan",
+    chineseName: "苑涛",
+    title: "Secretary General",
+    group: "Secretary General",
+    image: tomYuanBoard,
+    bio: "A leading resource integrator across the North American business circle, Tom serves as the 10th term Secretary General. His coordination and operational expertise underpin CESC's internal operations and external partnerships.",
+  },
+  {
+    name: "Lawrence X. Pan",
+    chineseName: "劳伦斯•潘小夏",
+    title: "CESC Mentor",
+    group: "Mentor",
+    image: lawrencePan,
+    bio: "Founding partner of China Investment Capital Fund. Former Chief China Representative, official spokesperson, and Managing Director Asia-Pacific for NASDAQ, and former President of NASDAQ China — leading 30+ Chinese IPOs including Baidu, Focus Media, and Home Inns, with combined IPO proceeds of US$5.3B and peak market cap above US$1T. Senior advisor to China's SASAC and ChiNext board, and a long-standing advisor at Tsinghua Science Park.",
+  },
+  {
+    name: "Yafu Guo",
+    chineseName: "郭亚夫",
+    title: "CESC Mentor",
+    group: "Mentor",
+    image: yafuGuo,
+    bio: "Wall Street investment veteran and founder of TJ Capital Management in New York with 30 years of experience as trader, market maker, and hedge fund manager. Author of two books on US securities markets and a long-time on-air commentator for Phoenix TV's financial programs.",
+  },
+];
+
+export const secretariat: Leader[] = [
+  {
+    name: "Tom Yuan",
+    chineseName: "苑涛",
+    title: "Secretary General",
+    group: "Secretary General",
+    image: secTomYuan,
+    bio: "Resource integrator across the North American business circle. As 10th term Secretary General, Tom leads CESC's internal operations and external coordination, ensuring members and partners are connected effectively.",
+  },
+  {
+    name: "Alysa Chen",
+    chineseName: "陳孟愈",
+    title: "Deputy Secretary General",
+    group: "Secretary General",
+    image: secAlysaChen,
+    bio: "General Manager of Canada United Investment and Regional Manager of Sheer Room luxury resale. Brings extensive experience in team management, sales strategy, and growth across luxury retail, finance, high-end services, and the wellness industry.",
+  },
+  {
+    name: "Patrick Pan",
+    chineseName: "潘翊雄",
+    title: "Deputy Secretary General",
+    group: "Secretary General",
+    image: secPatrickPan,
+    bio: "Marketing Director at Vancouver's renowned golf group JK World Group. Educated in the UK, US, and Canada, with deep expertise in marketing strategy, brand building, and public relations for premium sports and lifestyle businesses.",
+  },
+  {
+    name: "Vera Lin",
+    chineseName: "林芝安",
+    title: "Secretariat Member",
+    group: "Mentor",
+    image: secVeraLin,
+    bio: "Manager at Bayou Winery, leading label design and on-site operations. A product designer recognized at the Malaysia International Invention Design competition, blending aesthetics with wellness and energy healing.",
+  },
+  {
+    name: "Sylvia Lin",
+    chineseName: "林思韵",
+    title: "Secretariat Member",
+    group: "Mentor",
+    image: secSylviaLin,
+    bio: "CEO of LZL Industrial Development Ltd. with deep experience in engineering management, construction, earthworks, demolition, and international trade. Known for sharp market insight and strong execution across cross-border projects.",
+  },
+  {
+    name: "Anastasia Liu",
+    title: "Secretariat Member",
+    group: "Mentor",
+    image: secAnastasiaLiu,
+    bio: "UBC undergraduate and UCL graduate, currently practicing law in Vancouver with focus on corporate, family, and real estate law. Combines legal expertise with media production and bilingual MC experience to connect community resources.",
+  },
+  {
+    name: "Lili Niu",
+    chineseName: "牛麗麗",
+    title: "Secretariat Member",
+    group: "Mentor",
+    image: secLiliNiu,
+    bio: "Financial planner with a decade of experience across wealth management, portfolio optimization, tax planning, and retirement strategy. Also a seasoned philanthropic organizer with deep experience in fundraising and social impact programs.",
   },
 ];
 

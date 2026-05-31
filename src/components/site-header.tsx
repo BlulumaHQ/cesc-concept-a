@@ -18,6 +18,7 @@ const NAV: NavItem[] = [
     items: [
       { to: "/about", label: "About" },
       { to: "/leadership", label: "Leadership" },
+      { to: "/secretariat", label: "Secretariat" },
     ],
   },
   { type: "link", to: "/events", label: "Events" },

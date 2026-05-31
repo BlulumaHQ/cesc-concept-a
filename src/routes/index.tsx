@@ -143,7 +143,10 @@ function HomePage() {
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {leaders.map((l) => (
+            {leaders
+              .filter((l) => l.group === "President" || l.group === "Vice President" || l.group === "Secretary General")
+              .slice(0, 4)
+              .map((l) => (
               <article key={l.name} className="group hover-lift">
                 <div className="aspect-[3/4] overflow-hidden bg-[var(--secondary)]">
                   <img
@@ -157,7 +160,12 @@ function HomePage() {
                 </div>
                 <div className="pt-5">
                   <p className="text-[11px] uppercase tracking-[0.22em] text-[var(--gold)]">{l.title}</p>
-                  <h3 className="font-display text-xl mt-2">{l.name}</h3>
+                  <h3 className="font-display text-xl mt-2">
+                    {l.name}
+                    {l.chineseName && (
+                      <span className="block text-xs text-white/60 font-sans tracking-wide mt-1">{l.chineseName}</span>
+                    )}
+                  </h3>
                 </div>
               </article>
             ))}
