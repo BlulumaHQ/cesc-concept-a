@@ -15,6 +15,7 @@ import { Route as PartnershipRouteImport } from './routes/partnership'
 import { Route as NewsRouteImport } from './routes/news'
 import { Route as MembershipRouteImport } from './routes/membership'
 import { Route as LeadershipRouteImport } from './routes/leadership'
+import { Route as SecretariatRouteImport } from './routes/secretariat'
 import { Route as EventsRouteImport } from './routes/events'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as CommunityImpactRouteImport } from './routes/community-impact'
@@ -50,6 +51,11 @@ const MembershipRoute = MembershipRouteImport.update({
 const LeadershipRoute = LeadershipRouteImport.update({
   id: '/leadership',
   path: '/leadership',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SecretariatRoute = SecretariatRouteImport.update({
+  id: '/secretariat',
+  path: '/secretariat',
   getParentRoute: () => rootRouteImport,
 } as any)
 const EventsRoute = EventsRouteImport.update({
@@ -227,6 +233,13 @@ declare module '@tanstack/react-router' {
       path: '/leadership'
       fullPath: '/leadership'
       preLoaderRoute: typeof LeadershipRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/secretariat': {
+      id: '/secretariat'
+      path: '/secretariat'
+      fullPath: '/secretariat'
+      preLoaderRoute: typeof SecretariatRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/events': {
