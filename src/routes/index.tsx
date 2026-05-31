@@ -287,6 +287,13 @@ function HomePage() {
       <section className="relative py-28 overflow-hidden bg-[var(--primary)] text-white">
         <img src={skyline} alt="" className="absolute inset-0 w-full h-full object-cover opacity-25" loading="lazy" />
         <div className="absolute inset-0 bg-gradient-to-t from-[var(--primary)] via-[var(--primary)]/85 to-[var(--primary)]/60" />
+        <img
+          src="/images/world-map.png"
+          alt=""
+          aria-hidden
+          className="absolute inset-0 w-full h-full object-cover opacity-[0.18] mix-blend-screen pointer-events-none"
+          loading="lazy"
+        />
         <div className="relative container-x text-center max-w-3xl">
           <p className="eyebrow mb-6">{t("Membership")}</p>
           <h2 className="font-display text-3xl md:text-5xl leading-[1.1] text-balance">
