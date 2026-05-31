@@ -282,48 +282,143 @@ export const events = [
 
 export const articles = [
   {
-    slug: "future-of-chinese-canadian-entrepreneurship",
-    title: "The Future of Chinese Canadian Entrepreneurship in a Global Economy",
-    category: "Leadership",
-    date: "February 2026",
-    image: blog1,
+    slug: "pm-carney-meets-cesc-delegates",
+    title: "Canadian Prime Minister Meets with Distinguished CESC Representatives",
+    category: "Government & Business",
+    date: "June 22, 2025",
+    image: newsPmCarney,
     excerpt:
-      "Exploring how the next generation of Chinese Canadian entrepreneurs is shaping innovation, leadership, and global business collaboration.",
+      "Canadian Prime Minister Mark Carney met with CESC representatives during his Vancouver visit, recognizing the Association's contribution to the local economy and to Canada–China business ties.",
     body: [
-      "The landscape of entrepreneurship in Canada continues to evolve as a new generation of Chinese Canadian business leaders brings fresh perspectives, innovation, and international experience into the marketplace.",
-      "From technology startups and real estate development to hospitality, healthcare, finance, and international trade, Chinese Canadian entrepreneurs continue to play an important role in shaping Canada's economic future.",
-      "As global markets become increasingly interconnected, cross-cultural leadership and international collaboration have become essential skills for modern business growth. Entrepreneurs who understand both local communities and global opportunities are uniquely positioned to create meaningful impact across industries.",
-      "At CESC, we believe that supporting entrepreneurship means creating platforms for mentorship, networking, collaboration, and long-term leadership development. By connecting experienced professionals with emerging entrepreneurs, we help strengthen the future of business leadership throughout Canada and beyond.",
+      "During his official visit to Vancouver, the Right Honourable Prime Minister Mark Carney met with a delegation of distinguished representatives from the Canadian Entrepreneurs Society of Canada (CESC), acknowledging the Association's active role in supporting Chinese Canadian entrepreneurs and strengthening cross-border economic cooperation.",
+      "The CESC delegation, led by President Lenny Li, presented the Association's signature pin to the Prime Minister as a symbol of partnership between the Chinese Canadian business community and the federal government. Members shared CESC's ongoing work in international trade facilitation, member services, and community contribution across British Columbia.",
+      "The meeting reinforced CESC's commitment to acting as a trusted bridge between Canadian enterprises and the wider Asia-Pacific market, and to continuing to support policy dialogue, investment promotion, and entrepreneur development in Canada.",
     ],
   },
   {
-    slug: "community-driven-business-networks",
-    title: "Why Community-Driven Business Networks Matter More Than Ever",
-    category: "Community",
-    date: "January 2026",
-    image: blog2,
+    slug: "zhang-jian-sales-masterclass",
+    title: "CESC Joins Zhang Jian's Sales Masterclass — Insights on Selling Through a Changing Era",
+    category: "Enterprise Visit",
+    date: "June 1, 2025",
+    image: newsZhangJian,
     excerpt:
-      "Strong business communities are built through trust, mentorship, collaboration, and long-term relationships.",
+      "CESC members joined renowned sales strategist Zhang Jian's hands-on workshop, exploring how entrepreneurs can sharpen their sales capabilities amid shifting global markets.",
     body: [
-      "Successful business ecosystems are rarely built in isolation. Behind every thriving entrepreneur, innovative startup, or growing company is often a network of mentors, collaborators, strategic partners, and community support.",
-      "In today's rapidly changing economic environment, business leaders are increasingly recognizing the value of meaningful professional communities that encourage collaboration instead of competition.",
-      "Organizations like CESC provide opportunities for entrepreneurs and professionals to exchange ideas, discover new opportunities, and build relationships that extend beyond transactional networking.",
-      "Community-driven business networks also help create stronger local economies by encouraging mentorship, supporting emerging entrepreneurs, and fostering long-term partnerships between industries and communities.",
+      "Members of CESC took part in a focused workshop with Mr. Zhang Jian, one of the most respected practitioners in modern sales strategy, exploring how entrepreneurs and managers can adapt their approach to a rapidly changing economic environment.",
+      "The session covered customer psychology, team building, negotiation frameworks, and the discipline required to convert opportunities into long-term relationships. Participants engaged in live role-play and case discussions drawn from real situations facing Canadian and Chinese enterprises today.",
+      "The visit reflects CESC's commitment to continuous learning for its members — providing access to leading practitioners, practical training, and peer exchange that translates directly into business performance.",
     ],
   },
   {
-    slug: "canada-asia-markets",
-    title: "Building Stronger Connections Between Canadian and Asian Markets",
-    category: "International",
-    date: "December 2025",
-    image: blog3,
+    slug: "fairbrothers-fw-visit",
+    title: "Enterprise Visit: Exploring FAIRBROTHERS FW — The Strength of Chinese Canadian Enterprise",
+    category: "Enterprise Visit",
+    date: "May 24, 2025",
+    image: newsFairbrothers,
     excerpt:
-      "International collaboration continues to create new opportunities for entrepreneurs, investors, and business leaders.",
+      "CESC visited FAIRBROTHERS FW to learn first-hand how a Chinese Canadian enterprise has built a resilient, multi-generational business in Canada.",
     body: [
-      "Canada's position as a multicultural and globally connected country continues to create valuable opportunities for international business collaboration and economic growth.",
-      "As industries evolve and global markets become more interconnected, organizations and entrepreneurs that understand cross-border business relationships are better equipped to identify emerging opportunities and navigate international partnerships.",
-      "CESC encourages meaningful dialogue and collaboration between Canadian and Asian business communities while supporting innovation, entrepreneurship, and sustainable long-term partnerships.",
-      "By fostering stronger connections between industries, investors, entrepreneurs, and professionals, organizations can create greater opportunities for economic development and future growth.",
+      "A CESC delegation visited FAIRBROTHERS FW, gaining an inside look at the company's operations, product lines, and the long-term vision behind its development in Canada. The visit highlighted the discipline, craftsmanship, and entrepreneurial spirit that have allowed the company to grow steadily over the years.",
+      "Hosted by the company's leadership, members toured working facilities and discussed market strategy, supply chain resilience, and how Chinese Canadian enterprises can support each other through shared procurement, channel partnerships, and talent exchange.",
+      "The visit reinforced CESC's mission of connecting member enterprises with one another — building a network where companies learn from each other's experience and create tangible business collaboration.",
+    ],
+  },
+  {
+    slug: "los-beans-enterprise-visit",
+    title: "Enterprise Visit: Inside Los Beans — Sustainable Philosophy Behind Every Cup",
+    category: "Enterprise Visit",
+    date: "April 19, 2025",
+    image: newsLosBeans,
+    excerpt:
+      "CESC members visited Los Beans to learn how the brand combines sustainable sourcing, considered design, and a clear brand story to stand out in Vancouver's coffee scene.",
+    body: [
+      "CESC's enterprise visit series took members inside Los Beans, a Vancouver coffee brand whose work spans sustainable sourcing, roasting craft, and a thoughtfully designed retail experience. The founders shared the brand philosophy that guides every part of the operation, from green-bean origin selection to in-store hospitality.",
+      "Members heard about the team's approach to product development, customer experience, and building a brand identity that resonates with both local consumers and the broader specialty coffee community. The visit included a tasting and a candid discussion on the realities of running an independent food and beverage business in Canada.",
+      "The session reflects CESC's enterprise visit program — bringing members into the working environments of innovative Chinese Canadian businesses and surfacing practical lessons in operations, branding, and sustainable growth.",
+    ],
+  },
+  {
+    slug: "cesc-visits-morocco-honorary-consul",
+    title: "Deepening Business Cooperation: CESC Visits the Honorary Consul General of the Kingdom of Morocco",
+    category: "Diplomatic Exchange",
+    date: "January 13, 2025",
+    image: newsMorocco,
+    excerpt:
+      "A CESC delegation met the Honorary Consul General of the Kingdom of Morocco to discuss bilateral trade opportunities and pathways for Canadian Chinese enterprises into the Moroccan and broader African market.",
+    body: [
+      "President Lenny Li led a CESC delegation to meet with the Honorary Consul General of the Kingdom of Morocco in Vancouver, exploring concrete ways to expand business cooperation between Canadian Chinese enterprises and Moroccan partners.",
+      "Discussions covered Morocco's strategic role as a gateway to North Africa and the broader African continent, sectors of mutual interest including agriculture, energy, infrastructure, and consumer goods, and practical mechanisms for trade matchmaking and investment promotion.",
+      "Both sides agreed to maintain close exchanges and to explore joint events, delegation visits, and information sharing that will help CESC members evaluate and act on opportunities in the Moroccan market.",
+    ],
+  },
+  {
+    slug: "cesc-visits-uk-consulate-vancouver",
+    title: "CESC Invited to Visit the British Consulate-General in Vancouver",
+    category: "Diplomatic Exchange",
+    date: "December 19, 2024",
+    image: newsUk,
+    excerpt:
+      "CESC leadership was invited to the British Consulate-General in Vancouver to exchange views on UK–Canada business opportunities and pathways for collaboration.",
+    body: [
+      "At the invitation of the British Consulate-General in Vancouver, CESC leaders attended a working meeting focused on UK–Canada business cooperation. The discussion examined priority sectors, market entry considerations, and how CESC's network can support members exploring opportunities in the United Kingdom.",
+      "The two sides reviewed potential areas of collaboration including financial services, technology, education, sustainability, and creative industries, and explored ways to facilitate introductions between CESC members and UK counterparts.",
+      "The visit reflects CESC's growing role as a recognized partner for consulates and trade missions seeking to engage with the Chinese Canadian business community in British Columbia.",
+    ],
+  },
+  {
+    slug: "cesc-sco-trade-center-collaboration",
+    title: "Deepening Global Cooperation: CESC and the SCO Economic & Trade Center Chart a New International Blueprint",
+    category: "International Collaboration",
+    date: "December 7, 2024",
+    image: newsSco,
+    excerpt:
+      "CESC and the SCO Economic & Trade Center agreed to deepen cooperation, opening new channels for member enterprises across the SCO region.",
+    body: [
+      "CESC met with leaders of the Shanghai Cooperation Organization (SCO) Economic & Trade Center to explore a long-term cooperation framework. The discussion focused on how the SCO platform can support CESC members in accessing markets, partners, and projects across the SCO member states.",
+      "Both sides outlined practical areas of joint work including trade promotion, delegation exchanges, project matchmaking, and shared training programs. The collaboration is positioned to give Canadian Chinese enterprises a structured pathway into the broader Eurasian market.",
+      "The meeting marks an important step in CESC's international strategy — building institutional partnerships that provide members with credible, on-the-ground support in priority regions.",
+    ],
+  },
+  {
+    slug: "laos-consul-general-visits-cesc",
+    title: "Consul General of Laos and Senior Officials Visit CESC",
+    category: "Diplomatic Exchange",
+    date: "November 16, 2024",
+    image: newsLaos,
+    excerpt:
+      "The Consul General of the Lao People's Democratic Republic in Canada and senior consulate officials visited CESC to discuss bilateral business cooperation.",
+    body: [
+      "The Consul General of the Lao People's Democratic Republic in Canada, together with senior officials of the consulate, paid an official visit to CESC. The delegation was welcomed by CESC President Lenny Li and Association leaders for an in-depth exchange on trade and investment opportunities between Canada, the Chinese Canadian business community, and Laos.",
+      "Discussions covered priority sectors in the Lao economy, the consulate's role in facilitating business missions, and how CESC's network can support members interested in exploring opportunities in Southeast Asia. Both sides agreed to maintain regular communication and to organize follow-up activities for interested members.",
+      "The visit underscores CESC's standing as a meeting point for diplomatic missions and Canadian Chinese enterprises seeking serious, well-structured international cooperation.",
+    ],
+  },
+  {
+    slug: "cesc-dalian-visit",
+    title: "CESC Visits Dalian to Advance Canada–China Business Cooperation",
+    category: "International Collaboration",
+    date: "November 10, 2024",
+    image: newsDalian,
+    excerpt:
+      "A CESC delegation travelled to Dalian to meet with government bodies and enterprises, exchanging views on cross-border investment, trade, and industry cooperation.",
+    body: [
+      "A CESC delegation led by the Association's leadership visited Dalian for a series of meetings with local government bodies, industry associations, and enterprises. The visit was aimed at deepening practical cooperation between Canadian Chinese enterprises and the Dalian business community.",
+      "Throughout the visit the delegation discussed priority industries in Dalian — including advanced manufacturing, marine economy, food processing, and technology — and explored concrete pathways for trade and investment cooperation with Canadian counterparts.",
+      "The trip reinforced CESC's position as an active connector between Canadian and Chinese local economies, supporting members with on-the-ground introductions and partnership opportunities in key Chinese cities.",
+    ],
+  },
+  {
+    slug: "cesc-bridge-china-canada-cooperation",
+    title: "CESC: Building a Bridge for Canada–China Economic and Trade Cooperation",
+    category: "International Collaboration",
+    date: "September 20, 2024",
+    image: newsBridge,
+    excerpt:
+      "An overview of CESC's role as a long-standing bridge between Canadian and Chinese business communities, supporting trade, investment, and member growth.",
+    body: [
+      "Since its founding, CESC has worked to build a bridge between the Canadian and Chinese business communities — providing a trusted platform for trade promotion, investment matchmaking, policy dialogue, and member development.",
+      "Through partnerships with government bodies, consulates, industry associations, and enterprises on both sides of the Pacific, CESC has supported its members in exploring opportunities across sectors such as health and wellness, real estate, finance, technology, automotive, energy, and consumer goods.",
+      "Looking forward, CESC will continue to invest in its core mission: connecting Canadian Chinese entrepreneurs to credible international partners, and acting as a long-term partner in their growth.",
     ],
   },
 ];
