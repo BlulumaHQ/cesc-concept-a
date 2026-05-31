@@ -16,7 +16,6 @@ import newsMorocco from "@/assets/news/news-morocco-consul.jpg";
 import newsLosBeans from "@/assets/news/news-los-beans.jpg";
 import newsFairbrothers from "@/assets/news/news-fairbrothers.jpg";
 import newsZhangJian from "@/assets/news/news-zhang-jian.jpg";
-import newsPmCarney from "@/assets/news/news-pm-carney.jpg";
 import newsAssembly from "@/assets/news/news-10th-assembly.jpg";
 import newsSecretariatIntro from "@/assets/news/news-secretariat-intro.jpg";
 import newsCarneyMeet from "@/assets/news/news-carney-meet.jpg";
