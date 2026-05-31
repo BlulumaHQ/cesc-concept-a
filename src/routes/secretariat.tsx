@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site-layout";
 import { PageHero } from "@/components/page-hero";
 import { secretariat } from "@/lib/site-data";
+import { useT } from "@/lib/i18n";
 
 export const Route = createFileRoute("/secretariat")({
   head: () => ({
@@ -16,6 +17,7 @@ export const Route = createFileRoute("/secretariat")({
 });
 
 function SecretariatPage() {
+  const t = useT();
   return (
     <SiteLayout>
       <PageHero
@@ -27,14 +29,12 @@ function SecretariatPage() {
       <section className="py-20 md:py-28">
         <div className="container-x">
           <div className="mb-12 md:mb-16 max-w-3xl">
-            <p className="eyebrow mb-4">Secretariat Members</p>
+            <p className="eyebrow mb-4">{t("Secretariat Members")}</p>
             <h2 className="font-display text-3xl md:text-4xl leading-[1.1]">
-              Operations, partnerships, and member experience.
+              {t("Operations, partnerships, and member experience.")}
             </h2>
             <p className="mt-6 text-[var(--ink-soft)] leading-relaxed">
-              The Secretariat coordinates meetings, member activities, document and financial management,
-              external relations, communications, and member services — ensuring CESC operates with the rigor
-              and care its members deserve.
+              {t("The Secretariat coordinates meetings, member activities, document and financial management, external relations, communications, and member services — ensuring CESC operates with the rigor and care its members deserve.")}
             </p>
           </div>
 
@@ -52,16 +52,16 @@ function SecretariatPage() {
                   />
                 </div>
                 <div className="pt-6">
-                  <p className="text-[11px] uppercase tracking-[0.22em] text-[var(--gold)]">{l.title}</p>
+                  <p className="text-[11px] uppercase tracking-[0.22em] text-[var(--gold)]">{t(l.title)}</p>
                   <h3 className="font-display text-2xl md:text-3xl mt-3">
-                    {l.name}
+                    {t(l.name)}
                     {l.chineseName && (
                       <span className="block text-base text-[var(--ink-soft)] font-sans tracking-wide mt-1">
                         {l.chineseName}
                       </span>
                     )}
                   </h3>
-                  <p className="mt-4 text-[var(--ink-soft)] leading-relaxed text-[15px]">{l.bio}</p>
+                  <p className="mt-4 text-[var(--ink-soft)] leading-relaxed text-[15px]">{t(l.bio)}</p>
                 </div>
               </article>
             ))}

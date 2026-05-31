@@ -58,7 +58,7 @@ function LeadershipPage() {
                           <span className="block text-base text-[var(--ink-soft)] font-sans tracking-wide mt-1">{l.chineseName}</span>
                         )}
                       </h3>
-                      <p className="mt-4 text-[var(--ink-soft)] leading-relaxed text-[15px]">{l.bio}</p>
+                      <p className="mt-4 text-[var(--ink-soft)] leading-relaxed text-[15px]">{t(l.bio)}</p>
                     </div>
                   </article>
                 ))}
