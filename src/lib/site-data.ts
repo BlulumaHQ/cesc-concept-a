@@ -6,10 +6,6 @@ import eventJulyJourney from "@/assets/event-july-journey.jpg";
 import eventMexicoSummit from "@/assets/event-mexico-summit.jpg";
 import eventAnnualGala from "@/assets/event-annual-gala-2025.jpg";
 import eventLionsGateGala from "@/assets/event-lions-gate-gala.jpg";
-import blog1 from "@/assets/blog-1.jpg";
-import blog2 from "@/assets/blog-2.jpg";
-import blog3 from "@/assets/blog-3.jpg";
-
 // News articles
 import newsBridge from "@/assets/news/news-bridge-china.jpg";
 import newsDalian from "@/assets/news/news-dalian.jpg";
